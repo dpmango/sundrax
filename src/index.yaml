@@ -1,7 +1,7 @@
-ProjectTitle: Project-name
+ProjectTitle: Sundrax
 
 PageList:
-- file: homepage.html
-  ready: 100
-- file: page.html
-  ready: 0
+  - file: homepage.html
+    ready: 30
+  - file: page.html
+    ready: 0
