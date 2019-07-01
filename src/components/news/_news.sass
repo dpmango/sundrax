@@ -1,0 +1,61 @@
+.news
+
+
+.news-list
+  margin: 30px 0 50px
+
+.newslist-card
+  display: flex
+  align-items: flex-start
+  margin-bottom: 35px
+  &:last-child
+    margin-bottom: 0
+  &__image
+    position: relative
+    z-index: 1
+    display: block
+    flex: 0 0 250px
+    max-width: 250px
+    font-size: 0
+    overflow: hidden
+    &:hover
+      img
+        transform: scale(1.05)
+        filter: grayscale(.5)
+    img
+      width: 100%
+      transition: .25s $ease
+  &__content
+    flex: 1 1 auto
+    max-width: 100%
+    padding-left: 45px
+  &__title, &__description
+    max-width: 650px
+  &__title
+    font-size: 20px
+    line-height: 1.5
+    transition: color .25s $ease
+    strong
+      // TODO
+      display: block
+    &:hover
+      color: $colorRed
+      text-decoration: underline
+  &__description
+    font-size: 18px
+    line-height: 1.6
+    margin: .5em 0
+  &__tags
+    font-size: 20px
+    margin: 1em 0
+    a
+      display: inline-block
+      margin-right: .5em
+      color: $colorBlue
+      transition: color .25s $ease
+      &:hover
+        color: $colorPrimary
+  &__date
+    font-size: 20px
+    margin: 1em 0
+    color: #7f7e7c

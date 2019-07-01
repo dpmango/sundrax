@@ -14,42 +14,35 @@
     },
     init: function() {
       this.initSwipers();
-      this.initResponsiveSwipers();
-      this.listenResize();
+      // this.initResponsiveSwipers();
+      // this.listenResize();
     },
     listenResize: function() {
       _window.on('resize', debounce(this.initResponsiveSwipers.bind(this), 200));
     },
     initSwipers: function() {
-      // EXAMPLE SWIPER
-      new Swiper('[js-slider]', {
+      // ARTICLE SWIPER
+      var articleSwiper = new Swiper('[js-swiper-article-slider]', {
         wrapperClass: 'swiper-wrapper',
-        slideClass: 'example-slide',
-        direction: 'horizontal',
-        loop: false,
-        watchOverflow: true,
-        setWrapperSize: false,
+        slideClass: 'swiper-slide',
+        loop: true,
+        loopAdditionalSlides: 2,
         spaceBetween: 0,
-        slidesPerView: 'auto',
-        // loop: true,
+        slidesPerView: 1,
         normalizeSlideIndex: true,
-        // centeredSlides: true,
-        freeMode: true,
-        // effect: 'fade',
-        autoplay: {
-          delay: 5000,
-        },
-        navigation: {
-          nextEl: '.example-next',
-          prevEl: '.example-prev',
-        },
-        breakpoints: {
-          // when window width is <= 992px
-          992: {
-            autoHeight: true,
-          },
-        },
       });
+      // ARTICLE SWIPER THUMBS
+      var articleThumbsSwiper = new Swiper('[js-swiper-article-slider-thumbs]', {
+        wrapperClass: 'swiper-wrapper',
+        slideClass: 'swiper-slide',
+        loop: true,
+        spaceBetween: 24,
+        slidesPerView: 3,
+        normalizeSlideIndex: true,
+        slideToClickedSlide: true,
+      });
+      articleSwiper.controller.control = articleThumbsSwiper;
+      articleThumbsSwiper.controller.control = articleSwiper;
     },
 
     initResponsiveSwipers: function() {

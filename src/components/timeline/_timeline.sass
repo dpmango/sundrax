@@ -1,0 +1,49 @@
+// TIMELINE
+.timeline
+  margin: 30px 0
+  &__years
+    background: $fontColor
+    color: white
+
+  &__months
+
+  &__list
+    list-style: none
+    margin: 0 -5px
+    display: flex
+    flex-wrap: wrap
+    padding: 0
+    li
+      display: inline-block
+      &:last-child
+        margin-right: 0
+    a
+      display: inline-block
+      padding: 10px 5px
+      transition: .25s $ease
+    &--years
+      font-size: 18px
+      li
+        margin-right: 10px
+        &.is-active
+          a
+            background: $colorOrange
+            color: $fontColor
+      a
+        &:hover
+          background: $colorOrange
+          color: $fontColor
+
+    &--months
+      font-size: 16px
+      li
+        margin-right: 15px
+        &.is-active
+          a
+            text-decoration: none
+            color: $colorOrange
+      a
+        text-decoration: underline
+        &:hover
+          text-decoration: none
+          color: $colorOrange

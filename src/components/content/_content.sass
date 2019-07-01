@@ -17,6 +17,22 @@
     &--secondary
       flex-basis: $col4
       max-width: $col4
+    &--article
+      flex-basis: 60%
+      max-width: 60%
+    &--slider
+      flex-basis: 40%
+      max-width: 40%
+
++r(992)
+  .content
+    &__col
+      &--article, &--slider
+        flex-basis: $col12
+        max-width: $col12
+      &--slider
+        margin-top: 30px
+        max-width: 550px
 
 +r($md)
   .content
@@ -27,6 +43,7 @@
       &--secondary
         display: none
 
+// wysiwyg content
 .wysiwyg
   p
     font-size: 13px

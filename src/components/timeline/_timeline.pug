@@ -1,0 +1,25 @@
+//TIMELINE
+-
+  var list = {
+    years: ['2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010'],
+    months: ['Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+  }
+
+.timeline
+  .timeline__years
+    .container
+      ul.timeline__list.timeline__list--years
+        li.is-active
+          a(href='#') 2019
+        each year, idx in list.years
+          li
+            a(href='#')= year
+
+  .timeline__months
+    .container
+      ul.timeline__list.timeline__list--months
+        li.is-active
+          a(href='#') Январь
+        each month, idx in list.months
+          li
+            a(href='#')= month
