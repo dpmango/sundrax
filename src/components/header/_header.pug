@@ -27,6 +27,17 @@ header.header.is-white
               a(href="#")
                 +svgMono('social-facebook')
 
+        // search
+        .header__search
+          input(type="text")
+          button(type="submit")
+            +svgMono('search')
+
+        // contacts
+        .header__contacts
+          a(href='#').header__phone +7 495 797 32 18
+          a(href='#').header__callback Обратный звонок
+
       .header__hamburger
         .hamburger.hamburger--squeeze(js-hamburger)
           .hamburger-box
@@ -36,11 +47,15 @@ header.header.is-white
 .mobile-navi
   .mobile-navi__wrapper
     ul.mobile-navi__menu
-      li
-        a(href="homepage.html") Homepage
-      li
-        a(href="page.html") Shop
-      li
-        a(href="page.html") Lorem
+        li
+          a(href="#") Сандракс
+        li
+          a(href="#") Технологии и решения
+        li
+          a(href="#") Выполненные проекты
+        li
+          a(href="#") Поддержка
+        li
+          a(href="#") Контакты
     .mobile-navi__cta
-      a(href="mailto:sergey@khmelevskoy.co") sergey@khmelevskoy.co
+      a(href="mailto:help@sundrax.ru") help@sundrax.ru

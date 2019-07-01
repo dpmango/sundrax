@@ -1,7 +1,85 @@
 // FOOTER
 .footer
-  background: #f5f5f5
+  background: $colorPrimary
+  color: white
+  padding: 40px 0 35px
   &__wrapper
     display: flex
-    align-items: center
-    height: 100px
+    margin: 0 -12px
+  &__left, &__right
+    padding-left: 12px
+    padding-right: 12px
+    min-width: 1px
+    min-height: 0
+  &__left
+    flex: 1 1 auto
+  &__right
+    flex: 0 0 auto
+    margin-left: auto
+    padding-top: 30px
+
+  &__logo
+    font-size: 0
+    .ico
+      font-size: 84px
+
+  &__contacts
+    display: flex
+    margin-top: 30px
+  &__contactmap
+    position: relative
+    z-index: 1
+    overflow: hidden
+    border-radius: 10px
+    font-size: 0
+    img
+      max-width: 100%
+  &__contactlist
+    padding-left: 15px
+    font-size: 17px
+    p
+      margin: 0
+      & + p
+        margin-top: 0.5em
+    a
+      display: block
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
+  &__links
+    display: flex
+    flex-direction: column
+    a
+      font-size: 20px
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
+  &__socials
+    margin: 35px 0 30px
+  &__socials-title
+    font-size: 15px
+  &__socials-list
+    margin: 0.2em 0 0
+    font-size: 30px
+
+  &__socials-link
+    a
+      font-size: 18px
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
+  &__brands
+    margin-top: 30px
+  &__brands-title
+    font-size: 18px
+  &__brands-links
+    display: flex
+    flex-direction: column
+    a
+      font-size: 20px
+      text-decoration: underline
+      &:hover
+        text-decoration: none

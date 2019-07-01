@@ -2,7 +2,8 @@
   display: none
   position: fixed 0
   z-index: 8
-  background: $colorBg
+  background: $colorPrimary
+  color: white
   // display: flex
   flex-direction: column
   pointer-events: none
@@ -27,19 +28,19 @@
     a
       transition: .25s $ease
       &:hover
-        color: $fontColor50
+        color: rgba(white, .7)
   &__cta
     text-align: center
     margin-top: auto
     a
       transition: .25s $ease
       &:hover
-        color: $fontColor50
+        color: rgba(white, .7)
 
   &.is-active
     pointer-events: all
     transform: translate3d(0,0,0)
 
-+r($md)
++r($lg)
   .mobile-navi
     display: flex

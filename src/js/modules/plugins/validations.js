@@ -55,41 +55,41 @@
       /////////////////////
       // REGISTRATION FORM
       ////////////////////
-      $('.js-registration-form').validate({
-        errorPlacement: validateErrorPlacement,
-        highlight: validateHighlight,
-        unhighlight: validateUnhighlight,
-        submitHandler: validateSubmitHandler,
-        rules: {
-          lastName: 'required',
-          firstName: 'required',
-          email: {
-            required: true,
-            email: true,
-          },
-          password: {
-            required: true,
-            minlength: 6,
-          },
-          // phone: validatePhone
-        },
-        messages: {
-          lastName: 'Заполните это поле',
-          firstName: 'Заполните это поле',
-          email: {
-            required: 'Заполните это поле',
-            email: 'Email содержит неправильный формат',
-          },
-          password: {
-            required: 'Заполните это поле',
-            email: 'Пароль мимимум 6 символов',
-          },
-          // phone: {
-          //     required: "Заполните это поле",
-          //     minlength: "Введите корректный телефон"
-          // }
-        },
-      });
+      // $('.js-registration-form').validate({
+      //   errorPlacement: validateErrorPlacement,
+      //   highlight: validateHighlight,
+      //   unhighlight: validateUnhighlight,
+      //   submitHandler: validateSubmitHandler,
+      //   rules: {
+      //     lastName: 'required',
+      //     firstName: 'required',
+      //     email: {
+      //       required: true,
+      //       email: true,
+      //     },
+      //     password: {
+      //       required: true,
+      //       minlength: 6,
+      //     },
+      //     // phone: validatePhone
+      //   },
+      //   messages: {
+      //     lastName: 'Заполните это поле',
+      //     firstName: 'Заполните это поле',
+      //     email: {
+      //       required: 'Заполните это поле',
+      //       email: 'Email содержит неправильный формат',
+      //     },
+      //     password: {
+      //       required: 'Заполните это поле',
+      //       email: 'Пароль мимимум 6 символов',
+      //     },
+      //     // phone: {
+      //     //     required: "Заполните это поле",
+      //     //     minlength: "Введите корректный телефон"
+      //     // }
+      //   },
+      // });
 
       // when multiple forms share functionality
 

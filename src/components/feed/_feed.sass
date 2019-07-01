@@ -1,0 +1,150 @@
+// FEED
+.feed
+  margin: 30px 0
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    margin: -12px
+  &__col
+    width: 100%
+    display: flex
+    flex-direction: column
+    flex: 0 0 33.3333%
+    max-width: 33.3333%
+    min-width: 1px
+    min-height: 0
+    padding: 12px
+    &--50
+      flex-basis: 50%
+      max-width: 50%
+
++r($md)
+  .feed
+    &__col
+      flex-basis: 50%
+      max-width: 50%
+
+
++r($sm)
+  .feed
+    &__col
+      flex-basis: 100%
+      max-width: 100%
+      &--50
+        flex-basis: 100%
+        max-width: 100%
+
+
+/* article card
+.article-card
+  flex: 1 0 auto
+  position: relative
+  z-index: 1
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  &::after
+    display: inline-block
+    content: ' '
+    position: absolute 0
+    background: $colorPrimary
+    transform: translate3d(0,100%, 0)
+    transition: transform .25s $ease
+
+  &__image
+    position: absolute 0
+    font-size: 0
+    display: flex
+    flex-direction: column
+    img
+      flex: 1 1 auto
+      object-fit: cover
+  &__content
+    flex: 1 0 auto
+    position: relative
+    z-index: 2
+    color: white
+    display: flex
+    flex-direction: column
+    padding: 70px 40px 50px
+
+  &__title
+    font-size: 28px
+    line-height: 1
+    font-weight: 700
+    strong
+      display: block
+      font-size: 40px
+
+  &__intro-text
+    margin: .5em 0 1em
+    max-width: 330px
+    p
+      margin: 0
+      font-size: 14px
+      line-height: 1.35
+      & + p
+        margin-top: 0.8em
+  &__cta
+    margin-top: auto
+    font-size: 18px
+    font-weight: 700
+    a
+      display: inline-block
+      text-decoration: underline
+
+  &:hover
+    &::after
+      transform: translate3d(0,0,0)
+
+/* news card
+.news-card
+  flex: 1 0 auto
+  position: relative
+  z-index: 1
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  &__image
+    flex: 0 0 auto
+    font-size: 0
+    img
+      max-width: 100%
+  &__content
+    flex: 1 0 auto
+    position: relative
+    z-index: 2
+    display: flex
+    flex-direction: column
+    background: $fontColor
+    color: white
+    margin-top: -0.1em
+    padding: 15px
+    transition: .25s $ease
+
+  &__title
+    font-size: 15px
+    line-height: 1.33
+
+  &__intro-text
+    margin: .5em 0 1em
+    max-width: 330px
+    p
+      margin: 0
+      font-size: 13px
+      line-height: 1.28
+      & + p
+        margin-top: 0.8em
+  &__cta
+    margin-top: auto
+    font-size: 13px
+    font-weight: 700
+    a
+      display: inline-block
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
+  &:hover
+    .news-card__content
+      background: $colorPrimary

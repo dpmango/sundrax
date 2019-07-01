@@ -16,7 +16,7 @@
   &__logo
     flex: 0 0 auto
     font-size: 0px
-    padding-right: 30px
+    padding-right: 25px
     .ico
       font-size: 43px
 
@@ -29,7 +29,10 @@
     padding: 0
     li
       display: inline-block
-      margin-right: 10px
+      margin-right: 8px
+      // white-space: nowrap
+      &:last-child
+        margin-right: 0
     a
       display: inline-block
       padding: 5px
@@ -38,11 +41,70 @@
         color: tomato
 
   &__cta
+    display: flex
+    align-items: flex-start
     margin-left: auto
-    padding-left: 30px
+    padding-left: 10px
+    padding-top: 15px
   &__socials
+    flex: 0 0 auto
     li
       font-size: 18px
+
+  &__search
+    position: relative
+    flex: 0 0 auto
+    max-width: 120px
+    margin-left: 7px
+    padding-top: 0.05em
+    input
+      -webkit-appearance: none
+      width: 100%
+      display: block
+      background: rgba(white, 0.3)
+      border: 0
+      border-radius: 6px
+      padding: 2px 10px
+      font-size: 12px
+      color: rgba($fontColor, .5)
+      transition: .25s $ease
+      &::placeholder
+        color: rgba($fontColor, .5)
+      &:focus
+        background-color: rgba(white, .99)
+        color: $fontColor
+
+    button
+      -webkit-appearance: none
+      background: transparent
+      position: absolute
+      z-index: 2
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      font-size: 0
+      color: white
+      transition: color .25s $ease
+      .ico
+        font-size: 11px
+      &:hover
+        color: $colorPrimary
+
+  &__contacts
+    flex: 0 0 auto
+    margin-left: 7px
+    display: flex
+    flex-direction: column
+  &__phone
+    font-size: 17px
+    transition: color .25s $ease
+    &:hover
+      color: $colorPrimary
+  &__callback
+    font-size: 14px
+    text-decoration: underline
+    &:hover
+      text-decoration: none
 
   &__hamburger
     display: none
@@ -51,16 +113,22 @@
   &.is-white
     color: white
     background-color: transparent
+    .hamburger-inner
+      background-color: white
+      &::before, &::after
+        background-color: white
 
   &.is-fixed
     // should be normalized to -100% scroll at this point
     position: fixed
     // visibility: hidden
     transform: translate3d(0,-100%,0) !important
+    background: $fontColor
     transition: transform .25s $ease
     .header__wrapper
-      padding-top: 10px
-      padding-bottom: 10px
+      padding-top: 5px
+      padding-bottom: 5px
+
 
   &.is-fixed-visible
     // visibility: visible
@@ -73,18 +141,20 @@
 
 +r($lg)
   .header
-    &__cta
-      display: none
-
-+r($md)
-  .header
     &__menu
       display: none
     &__hamburger
-      margin-left: auto
+      // margin-left: auto
+      padding-top: 7px
       display: block
 
-+r($sm)
+
++r($md)
+  .header
+
++r(480)
   .header
     &__logo
-      font-size: 30px
+      padding-right: 0
+    &__search, &__socials
+      display: none
