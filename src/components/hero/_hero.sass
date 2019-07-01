@@ -30,6 +30,7 @@
     padding: 0
     color: white
     display: flex
+    flex-wrap: wrap
     margin: 10px -10px
     li
       width: 100%
@@ -58,3 +59,21 @@
         font-size: 18px
       &:hover
         opacity: 0.75
+
++r($sm)
+  .hero
+    &__title
+      font-size: 40px
+    &__subtitle
+      font-size: 30px
+    &__actions-list
+      li
+        flex-basis: 100%
+        max-width: 100%
+        justify-content: flex-start
+        padding: 0
+      a
+        width: 100%
+        justify-content: flex-start
+        .ico
+          flex: 0 0 40px

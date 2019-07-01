@@ -19,15 +19,25 @@
     align-items: center
     margin: 0 -12px
   &__col
-    width: 100%
-    flex: 0 0 50%
-    max-width: 50%
+    flex: 1 1 auto
     min-width: 1px
     min-height: 0
     padding: 0 12px
-
+    &--auto
+      flex: 0 0 auto
   &__title
     font-size: 40px
 
   &__mediaplugin
     text-align: right
+
++r($md)
+  .subs-social
+    &__grid
+      flex-wrap: wrap
+    &__col
+      flex-basis: 100%
+      max-width: 100%
+    &__mediaplugin
+      margin-top: 25px
+      text-align: left

@@ -16,7 +16,7 @@
   &__right
     flex: 0 0 auto
     margin-left: auto
-    padding-top: 30px
+    padding-top: 40px
 
   &__logo
     font-size: 0
@@ -25,7 +25,8 @@
 
   &__contacts
     display: flex
-    margin-top: 30px
+    align-items: flex-start
+    margin-top: 35px
   &__contactmap
     position: relative
     z-index: 1
@@ -40,7 +41,7 @@
     p
       margin: 0
       & + p
-        margin-top: 0.5em
+        margin-top: 0.3em
     a
       display: block
       text-decoration: underline
@@ -57,7 +58,7 @@
         text-decoration: none
 
   &__socials
-    margin: 35px 0 30px
+    margin: 30px 0 30px
   &__socials-title
     font-size: 15px
   &__socials-list
@@ -83,3 +84,21 @@
       text-decoration: underline
       &:hover
         text-decoration: none
+
++r($md)
+  .footer
+    &__wrapper
+      flex-wrap: wrap
+    &__left
+      flex-basis: 100%
+      max-width: 100%
+    &__right
+      flex-basis: 100%
+      max-width: 100%
+
++r($sm)
+  .footer
+    &__contactmap
+      display: none
+    &__contactlist
+      padding-left: 0
