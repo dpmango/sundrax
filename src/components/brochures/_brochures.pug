@@ -1,0 +1,20 @@
+// BROCHURES
+-
+  var list = [
+    'Наружное освещение',
+    'Сценическое освещение',
+    'Архитектурная подсветка',
+    'Управление подстанциями',
+    'Программное обеспечение'
+  ]
+
+.brochures
+  .container
+    .brochures__grid
+      each card, idx in list
+        // col
+        .brochures__col
+          a(href="#").brochures__card
+            .brochures__card-image
+              img(src='img/brochure.png' srcset='img/brochure@2x.png @2x' alt="")
+            .brochures__card-title= card

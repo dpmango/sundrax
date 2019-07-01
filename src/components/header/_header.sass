@@ -28,17 +28,53 @@
     margin: 0
     padding: 0
     li
+      position: relative
       display: inline-block
       margin-right: 8px
       // white-space: nowrap
       &:last-child
         margin-right: 0
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+        position: absolute
+        top: 100%
+        left: 0
+        z-index: 2
+        display: flex
+        font-size: 15px
+        opacity: 0
+        pointer-events: none
+        transform: translate3d(7px, 0, 0)
+        transition: .25s $ease
+        li
+          white-space: nowrap
+      &.is-active, &:hover
+        > a
+          color: $colorOrange
+        ul
+          opacity: 1
+          pointer-events: all
+          transform: translate3d(0,0,0)
+      &.is-active
+        &::before
+          display: block
+          content: ' '
+          position: absolute
+          top: 10px
+          left: -2px
+          size: 4px
+          border-radius: 50%
+          background: $colorOrange
+
     a
       display: inline-block
       padding: 5px
       transition: color .25s $ease
       &:hover
-        color: tomato
+        color: $colorOrange
+
 
   &__cta
     display: flex

@@ -1,34 +1,20 @@
 // SERVICE CATEGORIES
+-
+  var list = [
+    {icon: 'street', title: 'Наружное освещение'},
+    {icon: 'industry', title: 'Промышленное освещение'},
+    {icon: 'arch', title: 'Архитектурная подсветка'},
+    {icon: 'stage', title: 'Сценическое освещение'},
+    {icon: 'subs', title: 'Управление подстанциями'},
+  ]
+
 .service-categories
   .container
     .service-categories__grid
-      // col
-      .service-categories__col
-        a(href="#").service-categories__element
-          .service-categories__icon
-            +svgMono('street')
-          .service-categories__title Наружное освещение
-      // col
-      .service-categories__col
-        a(href="#").service-categories__element
-          .service-categories__icon
-            +svgMono('industry')
-          .service-categories__title Промышленное освещение
-      // col
-      .service-categories__col
-        a(href="#").service-categories__element
-          .service-categories__icon
-            +svgMono('arch')
-          .service-categories__title Архитектурная подсветка
-      // col
-      .service-categories__col
-        a(href="#").service-categories__element
-          .service-categories__icon
-            +svgMono('stage')
-          .service-categories__title Сценическое освещение
-      // col
-      .service-categories__col
-        a(href="#").service-categories__element
-          .service-categories__icon
-            +svgMono('subs')
-          .service-categories__title Управление подстанциями
+      each card, idx in list
+        // col
+        .service-categories__col
+          a(href="#").service-categories__element
+            .service-categories__icon
+              +svgMono(card.icon)
+            .service-categories__title= card.title

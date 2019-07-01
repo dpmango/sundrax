@@ -1,36 +1,47 @@
-.service-categories
-  margin: 20px 0px
+/* brochures
+.brochures
+  background: $colorBg
+  padding: 30px 0
+  margin: 30px 0 0
   &__grid
     display: flex
     flex-wrap: wrap
-    margin: 0 0px
+    margin: -12px
   &__col
     width: 100%
     flex: 0 0 20%
     max-width: 20%
     min-width: 1px
     min-height: 0
-    padding: 10px
-  &__element
+    padding: 12px
+  &__card
     display: flex
     flex-direction: column
     text-align: center
+    color: $fontColor50
     transition: color .25s ease
     &:hover
       color: $colorPrimary
-  &__icon
+      .brochures__card-image
+        img
+          transform: scale(1.1)
+
+  &__card-image
     flex: 0 0 auto
     font-size: 0
     padding-bottom: 10px
-    .ico
-      font-size: 52px
-  &__title
+    img
+      font-size: 0
+      max-width: 100%
+      transition: transform .25s $ease
+  &__card-title
     margin-top: auto
-    font-size: 15px
+    font-size: 18px
     word-spacing: 100vw
+    text-decoration: underline
 
 +r($md)
-  .service-categories
+  .brochures
     &__grid
       justify-content: center
     &__col

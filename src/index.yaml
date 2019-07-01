@@ -3,5 +3,7 @@ ProjectTitle: Sundrax
 PageList:
   - file: homepage.html
     ready: 70
-  - file: page.html
+  - file: company.html
+    ready: 70
+  - file: news.html
     ready: 0

@@ -17,7 +17,7 @@
         this.listenResize();
       }
 
-      this.setMenuClass();
+      // this.setMenuClass();
       this.controlHeaderClass();
     },
     getHeaderParams: function() {

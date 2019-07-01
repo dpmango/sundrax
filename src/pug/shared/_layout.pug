@@ -9,14 +9,14 @@ html(lang="en")
     #barba-wrapper
       block header
         include ../../components/header/_header
-    
+
       // what should be changed with every pjax
-      .page(class=outClass)
+      .page
         .page__content
           block content
 
         block footer
           include ../../components/footer/_footer
-          
+
       block scripts
         include _scripts
