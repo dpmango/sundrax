@@ -1,0 +1,31 @@
+.banner
+  position: relative
+  min-height: 470px
+  margin: 30px 0
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  display: flex
+  flex-direction: column
+  .container
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+
+
+  &--white
+    color: white
+  &__wrapper
+    padding: 40px 0 30px
+    margin: auto 0
+    max-width: 50%
+
+
++r($md)
+  .banner
+    background-position-x: 70%
+    .container
+      background: rgba($fontColor, .5)
+    &__wrapper
+      max-width: 500px
+      margin-top: 0

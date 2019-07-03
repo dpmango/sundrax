@@ -15,3 +15,5 @@ PageList:
     ready: 70
   - file: feedback.html
     ready: 70
+  - file: solutions.html
+    ready: 50
