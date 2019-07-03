@@ -1,6 +1,5 @@
 .news
 
-
 .news-list
   margin: 30px 0 50px
 
@@ -59,3 +58,23 @@
     font-size: 20px
     margin: 1em 0
     color: #7f7e7c
+  &__cta
+    font-size: 15px
+    margin: 1em 0
+    a
+      display: inline-block
+      text-decoration: underline
+      color: $colorPrimary
+      transition: color .25s ease
+      &:hover
+        text-decoration: none
+        color: $colorOrange
+
+  &--press
+    .newslist-card
+      &__title
+        font-size: 30px
+        font-weight: 700
+      &__description
+        font-size: 16px
+        max-width: 530px

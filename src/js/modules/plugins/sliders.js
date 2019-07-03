@@ -22,7 +22,10 @@
     },
     initSwipers: function() {
       // ARTICLE SWIPER
-      var articleSwiper = new Swiper('[js-swiper-article-slider]', {
+      var articleSwiperSelector = '[js-swiper-article-slider]';
+      var articleSwiperThumbsSelector = '[js-swiper-article-slider-thumbs]';
+
+      var articleSwiper = new Swiper(articleSwiperSelector, {
         wrapperClass: 'swiper-wrapper',
         slideClass: 'swiper-slide',
         loop: true,
@@ -32,7 +35,7 @@
         normalizeSlideIndex: true,
       });
       // ARTICLE SWIPER THUMBS
-      var articleThumbsSwiper = new Swiper('[js-swiper-article-slider-thumbs]', {
+      var articleThumbsSwiper = new Swiper(articleSwiperThumbsSelector, {
         wrapperClass: 'swiper-wrapper',
         slideClass: 'swiper-slide',
         loop: true,
@@ -41,8 +44,10 @@
         normalizeSlideIndex: true,
         slideToClickedSlide: true,
       });
-      articleSwiper.controller.control = articleThumbsSwiper;
-      articleThumbsSwiper.controller.control = articleSwiper;
+      if ($(articleSwiperSelector).length && $(articleSwiperThumbsSelector).length) {
+        articleSwiper.controller.control = articleThumbsSwiper;
+        articleThumbsSwiper.controller.control = articleSwiper;
+      }
     },
 
     initResponsiveSwipers: function() {
