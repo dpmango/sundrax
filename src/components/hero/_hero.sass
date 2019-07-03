@@ -33,18 +33,22 @@
     color: white
     display: flex
     flex-wrap: wrap
-    margin: 10px -10px
+    margin: 0px -10px
     li
       width: 100%
       flex: 0 0 $col4
       max-width: $col4
-      display: flex
       padding: 0 10px
-      justify-content: center
+      min-width: 1px
+      min-height: 0
+      display: flex
+      flex-direction: column
     a
+      flex: 1 0 auto
       display: flex
       align-items: center
-      padding: 5px
+      justify-content: center
+      padding: 15px 5px
       font-size: 0
       transition: .25s ease
       .ico
@@ -60,7 +64,8 @@
         margin-left: 12px
         font-size: 18px
       &:hover
-        opacity: 0.75
+        color: $fontColor
+        background: $colorOrange
 
 +r($sm)
   .hero

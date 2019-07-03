@@ -28,11 +28,11 @@
             each slide in [1,2,3,4,5,6]
               .article__slide.swiper-slide
                 span= slide
-                img(src='img/articleSliderImage.jpg' srcset='img/articleSliderImage@2x.jpg @2x' alt="")
+                img(src='img/articleSliderImage.jpg' srcset='img/articleSliderImage@2x.jpg 2x' alt="")
 
         .article__thumbs.swiper-container(js-swiper-article-slider-thumbs)
           .swiper-wrapper
             each thumb in [1,2,3,4,5,6]
-              .article__slide.swiper-slide
+              .article__slide.article__slide--thumb.swiper-slide
                 span= thumb
-                img(src='img/articleSliderImage.jpg' srcset='img/articleSliderImage@2x.jpg @2x' alt="")
+                img(src='img/articleSliderImage.jpg' srcset='img/articleSliderImage@2x.jpg 2x' alt="")

@@ -51,6 +51,8 @@
   &__slide
     position: relative
     font-size: 0
+    transition: border .25s $ease
+    border: 2px solid transparent
     span
       display: block
       position: absolute
@@ -64,3 +66,7 @@
       color: white
     img
       width: 100%
+    &--thumb
+      cursor: pointer
+      &:hover, &.swiper-slide-active
+        border-color: $colorPrimary
