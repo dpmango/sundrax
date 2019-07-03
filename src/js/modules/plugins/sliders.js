@@ -48,6 +48,28 @@
         articleSwiper.controller.control = articleThumbsSwiper;
         articleThumbsSwiper.controller.control = articleSwiper;
       }
+
+      // FEEDBACK SWIPER
+      var feedbackSwiper = new Swiper('[js-swiper-feedback]', {
+        wrapperClass: 'swiper-wrapper',
+        slideClass: 'swiper-slide',
+        loop: true,
+        spaceBetween: 0,
+        slidesPerView: 3,
+        normalizeSlideIndex: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          568: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+        },
+      });
     },
 
     initResponsiveSwipers: function() {

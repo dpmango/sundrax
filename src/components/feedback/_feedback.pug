@@ -1,0 +1,36 @@
+// FEEDBACK
+.feedback
+  // nav
+  .feedback__nav
+    .container
+      .feedback__nav-grid
+        a(href="#").btn.btn-primary ФКУ Упрдор "Каспий"
+        a(href="#").btn.btn-primary ФКУ Упрдор "Каспий"
+        a(href="#").btn.btn-primary ФКУ Упрдор "Каспий"
+        a(href="#").btn.btn-primary МУП "Грозненские электрические сети"
+        a(href="#").btn.btn-primary ФКУ Упрдор "Каспий"
+        a(href="#").btn.btn-primary ФКУ Упрдор "Каспий"
+        a(href="#").btn.btn-primary МУП "Грозненские электрические сети"
+        a(href="#").btn.btn-primary ФКУ Упрдор "Каспий"
+
+  // persons
+  .feedback__persons
+    .container
+      .feedback__slider.swiper-container(js-swiper-feedback)
+        .swiper-wrapper
+          // slide
+          each person in [1,2,3,4,5,6]
+            .swiper-slide
+              .feedback-person
+                .feedback-person__image
+                  img(src='img/feedbackFace_1.jpg' srcset='img/feedbackFace_1@2x.jpg 2x')
+                .feedback-person__content
+                  .feedback-person__text
+                    p «Сайт – не центр вашей Вселенной. Страница в Facebook – не центр вашей Вселенной. Мобильное приложение – не центр вашей Вселенной.
+                    p Клиент – вот центр вашей Вселенной!»
+                  .feedback-person__position - Брюс Эрнст, product-менеджер Monetate
+
+        .swiper-button-prev
+          i.icon.icon-swiper-left
+        .swiper-button-next
+          i.icon.icon-swiper-right

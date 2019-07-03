@@ -13,3 +13,5 @@ PageList:
     ready: 70
   - file: press-article.html
     ready: 70
+  - file: feedback.html
+    ready: 70

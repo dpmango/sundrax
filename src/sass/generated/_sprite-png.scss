@@ -5,7 +5,25 @@ $sprite: (
 		width: 300px,
 		height: 70px,
 		total-width: 300px,
-		total-height: 70px,
+		total-height: 104px,
+		image: '../img/sprite.png'
+	),
+	swiper-left: (
+		offset-x: 0px,
+		offset-y: -80px,
+		width: 14px,
+		height: 24px,
+		total-width: 300px,
+		total-height: 104px,
+		image: '../img/sprite.png'
+	),
+	swiper-right: (
+		offset-x: -24px,
+		offset-y: -80px,
+		width: 14px,
+		height: 24px,
+		total-width: 300px,
+		total-height: 104px,
 		image: '../img/sprite.png'
 	),
 );
@@ -66,4 +84,10 @@ $sprite: (
 
 	.icon-logo {
 		@include sprite(logo)
+	}
+	.icon-swiper-left {
+		@include sprite(swiper-left)
+	}
+	.icon-swiper-right {
+		@include sprite(swiper-right)
 	}
