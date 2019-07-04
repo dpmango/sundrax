@@ -23,3 +23,5 @@ PageList:
     ready: 70
   - file: project.html
     ready: 50
+  - file: contacts.html
+    ready: 40
