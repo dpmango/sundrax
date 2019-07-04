@@ -51,6 +51,13 @@
   p
     font-size: 15px
     line-height: 1.4
+    a
+      color: $colorPrimary
+      text-decoration: underline
+      transition: .25s $ease
+      &:hover
+        color: $colorBlue
+        text-decoration: none
 
   h1,h2,h3,h4,h5,h6
     font-weight: 700
@@ -91,6 +98,16 @@
       &::after
         content: '—'
 
+  blockquote
+    font-size: 15px
+    margin: 1.5em 0 0.5em
+    &::before
+      content: '«'
+      font-size: 25px
+      display: inline-block
+      margin-right: 0.1em
+      color: $colorPrimary
+
   a:not(.btn)
     color: $colorPrimary
     text-decoration: underline
@@ -100,3 +117,13 @@
 
   img
     max-width: 100%
+
+
+.w-400
+  font-weight: 400
+.w-700
+  font-weight: 700
+
+// colors
+.c-font
+  color: $fontColor

@@ -1,37 +1,57 @@
 /* UI
 
-
-// WORKS KIND OF bootstrap - group have label and input
 .ui-group
   position: relative
-  margin-bottom: 20px
-  label
+  margin-bottom: 15px
+  > label:not(.ui-input__validation)
     display: block
-    margin-bottom: 10px
+    font-size: 15px
+    color: #7f7e7c
+    margin-bottom: 7px
+    &.c-font
+      color: $fontColor
 
-// for input or textarea element
+  &__row
+    display: flex
+    flex-wrap: wrap
+    margin: -6px
+    .selectric-wrapper, .ui-checkbox, .ui-radio, .ui-select
+      flex: 0 0 auto
+      padding: 6px
+    .selectric-items
+      left: 7px
+
 .ui-input
   -webkit-appearance: none
   display: block
   width: 100%
   background: white
   font-family: $systemFont
-  color: $fontColor50
-  border: 1px solid $borderColor
+  color: $fontColor
+  border: 1px solid $colorOrange
+  font-size: 15px
   border-radius: 4px
-  padding: 12px 15px
+  padding: 7px 15px
+  transition: .25s $ease
+  &::placeholder
+    color: $fontColor50
   &.has-error
     color: $colorRed
+    border-color: $colorRed
     &::placeholder
       color: rgba($colorRed, .5)
+  &:focus
+    box-shadow: 0px 0px 4px 2px rgba($colorOrange, 0.5)
 
-.ui-input textarea
+textarea.ui-input
   resize: vertical
 
 
+.ui-input__validation
+  color: $colorRed
 
 /* Checkbox
-.ui-checkbox
+.ui-checkbox, .ui-radio
   input
     display: none
     width: 0.1px
@@ -40,12 +60,6 @@
     position: absolute
     top: 0
     left: 0
-    &:checked
-      + label
-        &::before
-          border-color: $colorGreen
-        &::after
-          transform: translateY(-50%) scale(1)
   label
     display: block
     width: 100%
@@ -54,36 +68,72 @@
     &::before
       position: absolute
       left: 0
-      top: 50%
-      transform: translateY(-50%)
+      top: 0%
       display: inline-block
       content: ' '
-      size: 20px
+      size: 15px
       background-color: white
-      border: 1px solid #AFB7C0
-      border-radius: 4px
+      border: 1px solid $colorOrange
       cursor: pointer
       vertical-align: middle
       cursor: pointer
       transition: all $transitionSpeed ease-in-out
     &::after
       position: absolute
-      left: 6px
-      top: 50%
-      transform: translateY(-50%) scale(0)
+      left: 0px
+      top: 0px
+      transform: scale(0)
       display: inline-block
       content: ' '
-      size: 10px
-      background: $colorGreen
-      border-radius: 50%
-      // background-image: svg-load('../../images/svg/checkbox.svg')
-      // background-repeat: no-repeat
-      // background-position: center
+      size: 15px
+      background: $colorOrange
       transition: transform .2s ease
     span
       display: inline-block
-      padding-left: 35px
+      padding-left: 25px
       vertical-align: top
       line-height: 1.3
       font-size: 14px
       cursor: pointer
+      a
+        color: $colorRed
+        text-decoration: underline
+        transition: .25s $ease
+        &:hover
+          color: $colorOrange
+          text-decoration: none
+
+.ui-checkbox
+  input:checked
+    + label
+      &::before
+        background-color: $colorOrange
+      &::after
+        transform: scale(1)
+  label
+    &::before
+      border-radius: 2px
+    &::after
+      top: 5px
+      left: 2px
+      size: 12px 8px
+      background-image: svg-load('../icons/svg-mono/checkmark.svg', fill="#fff")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+
+.ui-radio
+  input:checked
+    + label
+      &::before
+      &::after
+        transform: scale(1)
+  label
+    &::before
+      border-radius: 50%
+    &::after
+      border-radius: 50%
+      size: 9px
+      color: $colorPrimary
+      top: 4px
+      left: 4px

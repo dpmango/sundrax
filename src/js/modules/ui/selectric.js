@@ -8,9 +8,10 @@
       if ($select.length === 0) return;
 
       $select.selectric({
+        // responsive: true,
         maxHeight: 300,
-        arrowButtonMarkup:
-          '<b class="button"><svg class="ico ico-select-down"><use xlink:href="img/sprite.svg#ico-select-down"></use></svg></b>',
+        // arrowButtonMarkup:
+        //   '<b class="button"><svg class="ico ico-select-down"><use xlink:href="img/sprite.svg#ico-select-down"></use></svg></b>',
 
         onInit: function(element, data) {
           var $elm = $(element),

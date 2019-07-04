@@ -1,0 +1,64 @@
+// FORM
+form(action="#" js-validate-request)
+  .ui-group
+    label(for="org") Название организации*
+    input.ui-input(type="text" name="org" required)
+  .ui-group
+    label(for="fio") ФИО*
+    input.ui-input(type="text" name="fio" required)
+  .ui-group
+    label(for="phone") Контактный номер*
+    input.ui-input(type="tel" name="phone" required)
+  .ui-group
+    label(for="email") Электронная почта*
+    input.ui-input(type="email" name="email" required)
+  .ui-group
+    label(for="obj") Название объекта
+    input.ui-input(type="text" name="obj")
+  .ui-group
+    label Дата реализации проекта
+    .ui-group__row
+      select(js-select placeholder="Месяц")
+        option Январь
+        option Феварль
+        option Март
+        option Апрель
+        option Май
+        option Июнь
+        option Июль
+        option Август
+        option Сентябрь
+        option Октябрь
+        option Ноябрь
+        option Декабрь
+      select(js-select placeholder="Год")
+        option 2019
+        option 2020
+        option 2021
+        option 2022
+        option 2023
+        option 2024
+
+  .ui-group
+    label(for="comment") Комментарий
+    textarea.ui-input(tname="comment" rows='5' data-min-rows="5")
+
+  .ui-group
+    label.c-font Хочу получать персональную рассылку маркетинговых материалов о продуктах, мероприятиях и акциях Sundrax
+    .ui-group__row
+      .ui-radio
+        input(type="radio" name="newsletter" value="yes" id="newsletter_yes" checked)
+        label(for="newsletter_yes")
+          span Да
+      .ui-radio
+        input(type="radio" name="newsletter" value="yes" id="newsletter_no")
+        label(for="newsletter_no")
+          span Нет
+
+  .ui-group.ui-group--wide
+    .ui-checkbox
+      input(type="checkbox" name="confidential" id="confidential" required)
+      label(for="confidential")
+        span Нажимая кнопку, я принимаю <a href="#">соглашение о конфиденциальности</a> и соглашаюсь с обработкой персональных данных*
+
+  button(type="submit").btn.btn-primary Отправить запрос
