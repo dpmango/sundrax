@@ -1,0 +1,61 @@
+// SUPPORT
+.support
+  // support head
+  .support-head
+    .container
+      .support-head__wrapper
+        .support-head__title
+          span Единый телефон поддержки
+          a(href="#") 8-800-600-50-49
+        .support-head__cta
+          a(href="#").btn.btn-primary.btn--iconed
+            span Личный кабинет
+            +svgMono('enter')
+
+      .support-head__button
+        a(href="#").btn.btn-primary Заказать звонок
+
+  // support nav
+  .support-nav
+    .container
+      // search
+      .support-nav__search
+        .ui-search
+          input(type="text")
+          button(type="submit")
+            +svgMono('search')
+
+      // nav
+      ul.support-nav__list
+        li.is-active
+          a(href='#') Инструкции
+        li
+          a(href='#') Спецификации
+        li
+          a(href='#') Руководства по установке
+
+  // content
+  .support-links
+    .container
+      .support-links__grid
+        each list in [1,2,3]
+          ul.support-links__list
+            li
+              a(href="#") ArtGate Arma
+            li
+              a(href="#") ArtGate Compact
+            li
+              a(href="#") ArtGate DIN
+            li
+              a(href="#") ArtGate PRO
+            li
+              a(href="#") ArtGate PRO Deluxe
+            li
+              a(href="#") ArtGate Solid
+            li
+              a(href="#") CrossGate PRO
+            li
+              a(href="#") CrossGate Solid (Ethernet)
+  .support-links-cta
+    .container
+      a(href="#") Скачать архив (54Мб)

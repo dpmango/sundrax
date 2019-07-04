@@ -1,0 +1,150 @@
+// support
+.support
+  margin-bottom: 70px
+
+/* support -head
+.support-head
+  margin: 40px 0
+  &__wrapper
+    display: flex
+    align-items: center
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    margin: -12px
+  &__col
+    width: 100%
+    flex: 0 0 50%
+    max-width: 50%
+    min-width: 1px
+    padding: 12px
+  &__title
+    font-weight: 700
+    span
+      display: block
+      font-size: 30px
+    a
+      margin-top: 0.2em
+      font-size: 45px
+      display: inline-block
+      transition: color .25s $ease
+      &:hover
+        color: $colorPrimary
+  &__cta
+    margin-left: auto
+
+  &__button
+    margin-top: 1em
+
++r($md)
+  .support-head
+    &__col
+      flex-basis: 100%
+      max-width: 100%
+    &__wrapper
+      flex-wrap: wrap
+    &__cta
+      margin-top: 0.5em
+      flex: 0 0 100%
+    &__title
+      span
+        font-size: 25px
+      a
+        font-size: 35px
+
+/* support-nav
+.support-nav
+  margin: 40px 0 15px
+  &__search
+
+  &__list
+    list-style: none
+    margin: 25px -5px 10px
+    padding: 0
+    li
+      display: inline-block
+      padding: 5px
+      margin-right: 40px
+      &:last-child
+        margin-right: 0
+      &.is-active
+        a
+          color: $colorPrimary
+          text-decoration: none
+    a
+      display: inline-block
+      font-size: 20px
+      font-weight: 700
+      text-decoration: underline
+      transition: color .25s $ease
+      &:hover
+        color: $colorPrimary
+
+
+/* support links
+.support-links
+  background: $colorBg
+  padding: 20px 0
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -25px
+  &__title
+    font-weight: 700
+    font-size: 40px
+    margin-top: 0.1em
+    margin-bottom: 0.3em
+
+  &__list
+    flex: 0 0 auto
+    min-width: 1px
+    min-height: 0
+    list-style: none
+    margin: 0px 0px
+    padding: 0px 25px
+    li
+      font-size: 16px
+      display: block
+      padding: 5px 0
+      margin-bottom: 15px
+      &:last-child
+        margin-bottom: 0px
+      &.is-active
+        a
+          color: $colorPrimary
+          text-decoration: none
+    a
+      text-decoration: underline
+      transition: color .25s $ease
+      &:hover
+        text-decoration: none
+        color: $colorPrimary
+    &--faq
+      padding: 0
+      a
+        font-size: 18px
+        color: $colorPrimary
+        &:hover
+          color: $colorBlue
+
++r($md)
+  .support-links
+    &__title
+      font-size: 30px
+    &__list
+      margin-bottom: 10px
+      &--faq
+        li
+          font-size: 16px
+
+.support-links-cta
+  margin-top: 1em
+  a
+    display: inline-block
+    color: $colorPrimary
+    font-size: 14px
+    transition: color .25s $ease
+    text-decoration: underline
+    &:hover
+      color: $colorBlue
+      text-decoration: none
