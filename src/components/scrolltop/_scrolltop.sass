@@ -1,0 +1,35 @@
+// .scrolltop
+.scrolltop
+  position: fixed
+  z-index: 5
+  bottom: 30px
+  right: 30px
+  cursor: pointer
+  transform: translate(0,10px)
+  opacity: 0
+  pointer-events: none
+  transition: .25s $ease
+  &.is-visible
+    opacity: 1
+    pointer-events: all
+    transform: translate(0,0)
+  span
+    display: inline-block
+    font-size: 16px
+    border-bottom: 1px dashed $fontColor
+    transition: .25s $ease
+  &:hover
+    span
+      color: $colorPrimary
+      border-color: transparent
+  &.is-white
+    span
+      color: white
+      border-color: white
+    &:hover
+      color: rgba(white, .7)
+      border-color: rgba(white, .7)
+
++r($lg)
+  .scrolltop
+    display: none

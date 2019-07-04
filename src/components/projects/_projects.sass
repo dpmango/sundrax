@@ -1,0 +1,127 @@
+/* .projects
+.projects
+  margin: 30px 0 50px
+  &__search
+    margin: 20px 0
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    margin: -7px
+  &__col
+    width: 100%
+    flex: 0 0 $col4
+    max-width: $col4
+    min-width: 1px
+    min-height: 0
+    padding: 7px
+    &--6
+      flex-basis: $col6
+      max-width: $col6
+    &--8
+      flex-basis: $col8
+      max-width: $col8
+    &--12
+      flex-basis: $col12
+      max-width: $col12
+
+/* .search-projects
+.search-projects
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  &__input
+    position: relative
+    flex: 1 1 auto
+    max-width: 350px
+    input
+      -webkit-appearance: none
+      display: block
+      width: 100%
+      display: block
+      background: white
+      border: 1px solid $colorPrimary
+      border-radius: 6px
+      padding: 10px 35px 10px 15px
+      font-size: 16px
+      color: $fontColor
+      transition: .25s $ease
+      &::placeholder
+        color: rgba($fontColor, .5)
+      &:focus
+        border-color: $colorOrange
+
+    button
+      -webkit-appearance: none
+      background: transparent
+      position: absolute
+      z-index: 2
+      right: 7px
+      top: 50%
+      transform: translateY(-50%)
+      font-size: 0
+      padding: 10px 5px
+      color: $colorPrimary
+      transition: color .25s $ease
+      .ico
+        font-size: 20px
+      &:hover
+        color: $colorOrange
+
+  &__hint
+    padding-left: 25px
+    font-size: 18px
+    font-weight: 700
+    span
+      color: $colorPrimary
+
+  &__cta
+    margin-left: auto
+
+.project
+  display: block
+  position: relative
+  z-index: 1
+  overflow: hidden
+  height: 300px
+  background: $colorBg
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  &__content
+    position: absolute 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background: $colorPrimary
+    color: white
+    padding: 20px
+    transform: translate3d(0,100%,0)
+    transition: transform .3s $ease
+    backface-visibility: hidden
+    transform-style: preserve-3d
+  &__title
+    font-weight: 700
+    font-size: 40px
+  &__name
+    font-weight: 700
+    font-size: 30px
+  &__location
+    margin-top: 0.2em
+    font-size: 30px
+  &--huge
+    height: 490px
+    .project__content
+      padding: 30px
+    .project__title
+      font-size: 50px
+
+  &:hover
+    .project
+      &__content
+        transform: translate3d(0,0,0)
+
+.projects__col
+  &--8, &--12
+    .project
+      &__name, &__location
+        font-size: 35px

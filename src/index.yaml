@@ -17,3 +17,7 @@ PageList:
     ready: 70
   - file: solutions.html
     ready: 50
+  - file: projects_1.html
+    ready: 70
+  - file: projects_2.html
+    ready: 70
