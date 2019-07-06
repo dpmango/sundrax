@@ -13,7 +13,8 @@
     flex: 1 1 auto
     display: flex
     flex-direction: column
-    padding: 50px 25px 20px
+    overflow-y: scroll
+    padding: 80px 25px 20px
   &__menu
     margin-top: auto
     padding: 20px 0
@@ -21,10 +22,16 @@
     text-align: center
     li
       display: block
-      font-size: 36px
+      font-size: 32px
       margin-bottom: 30px
       &:last-child
         margin-bottom: 0
+      ul
+        margin: 0
+        padding: 10px 0 0
+        li
+          font-size: 18px
+          margin-bottom: 10px
     a
       transition: .25s $ease
       &:hover

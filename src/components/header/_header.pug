@@ -5,59 +5,7 @@ header.header.is-white
       a(href="homepage.html").header__logo
         +svgMono('logo')
       ul.header__menu
-        li.is-active
-          a(href="homepage.html") Сандракс
-          ul
-            li
-              a(href='company.html') О компании
-            li
-              a(href='news.html') Новости
-            li
-              a(href='feedback.html') Отзывы
-            li
-              a(href='press.html') Пресса о нас
-        li
-          a(href="solutions.html") Технологии и решения
-          ul
-            li
-              a(href="#") Наружное освещение
-            li
-              a(href="#") Промышленное освещение
-            li
-              a(href="#") Архитектурная подсветка
-            li
-              a(href="#") Сценическое освещение
-            li
-              a(href="#") АСДУ ТП
-            li
-              a(href="#") Оборудование
-
-        li
-          a(href="projects_2.html") Выполненные проекты
-          ul
-            li
-              a(href="projects_1.html") Наружное освещение
-            li
-              a(href="projects_1.html") Промышленное освещение
-            li
-              a(href="projects_1.html") Архитектурная подсветка
-            li
-              a(href="projects_1.html") Сценическое освещение
-            li
-              a(href="projects_1.html") АСДУ ТП
-        li
-          a(href="support_2.html") Поддержка
-          ul
-            li
-              a(href="support_1.html") Клиентам
-            li
-              a(href="support_1.html") Проектировщикам
-            li
-              a(href="support_1.html") Сервис и гарантия
-
-        li
-          a(href="contacts.html") Контакты
-
+        include _menuContent
 
       .header__cta
         .header__socials
@@ -89,15 +37,6 @@ header.header.is-white
 .mobile-navi
   .mobile-navi__wrapper
     ul.mobile-navi__menu
-        li
-          a(href="#") Сандракс
-        li
-          a(href="#") Технологии и решения
-        li
-          a(href="#") Выполненные проекты
-        li
-          a(href="#") Поддержка
-        li
-          a(href="#") Контакты
+      include _menuContent
     .mobile-navi__cta
       a(href="mailto:help@sundrax.ru") help@sundrax.ru

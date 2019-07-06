@@ -107,15 +107,25 @@
       var headerMenuList = $('.header__menu li');
       if (headerMenuList.length === 0) return;
 
-      headerMenuList.each(function(i, val) {
+      // cleanup
+      $('.header__menu > li.is-active').removeClass('is-sibling-hovered');
+
+      headerMenuList.each(function(i, el) {
         if (
-          $(val)
+          $(el)
             .find('a')
             .attr('href') === window.location.pathname.split('/').pop()
         ) {
-          $(val).addClass('is-active');
+          $(el).addClass('is-active');
+          // check if parent active
+          var $elParentLi = $(el)
+            .parent()
+            .closest('li');
+          if ($elParentLi.length > 0) {
+            $elParentLi.addClass('is-active');
+          }
         } else {
-          $(val).removeClass('is-active');
+          $(el).removeClass('is-active');
         }
       });
     },
