@@ -32,6 +32,7 @@
 
   &__mediaplugin
     text-align: right
+    width: 420px
 
 +r($md)
   .subs-social
@@ -43,3 +44,18 @@
     &__mediaplugin
       margin-top: 25px
       text-align: left
+
++r($sm)
+  .subs-social
+    &__title
+      font-size: 30px
+
++r(460)
+  .subs-social
+    &__mediaplugin
+      width: 100%
+      // width: auto
+.fb-page,
+.fb-page span,
+.fb-page span iframe[style]
+  width: 100% !important;

@@ -2,21 +2,21 @@ ProjectTitle: Sundrax
 
 PageList:
   - file: homepage.html
-    ready: 70
+    ready: 90
   - file: company.html
-    ready: 70
+    ready: 90
   - file: news.html
-    ready: 70
+    ready: 90
   - file: news-article.html
-    ready: 70
+    ready: 90
   - file: press.html
-    ready: 70
+    ready: 90
   - file: press-article.html
-    ready: 70
+    ready: 90
   - file: feedback.html
-    ready: 70
+    ready: 90
   - file: solutions.html
-    ready: 50
+    ready: 70
   - file: projects_1.html
     ready: 70
   - file: projects_2.html
@@ -24,8 +24,8 @@ PageList:
   - file: project.html
     ready: 60
   - file: contacts.html
-    ready: 50
+    ready: 70
   - file: support_1.html
-    ready: 70
+    ready: 90
   - file: support_2.html
-    ready: 70
+    ready: 90

@@ -84,7 +84,7 @@
 /* support links
 .support-links
   background: $colorBg
-  padding: 20px 0
+  padding: 20px 0 15px 0
   &__grid
     display: flex
     flex-wrap: wrap
@@ -108,7 +108,7 @@
       padding: 5px 0
       margin-bottom: 15px
       &:last-child
-        margin-bottom: 0px
+        // margin-bottom: 0px
       &.is-active
         a
           color: $colorPrimary
@@ -132,10 +132,16 @@
     &__title
       font-size: 30px
     &__list
-      margin-bottom: 10px
+      // margin-bottom: 10px
       &--faq
         li
           font-size: 16px
+
++r($sm)
+  .support-links
+    &__list
+      li
+        margin-bottom: 5px
 
 .support-links-cta
   margin-top: 1em
