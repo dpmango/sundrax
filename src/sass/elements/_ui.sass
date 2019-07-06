@@ -48,12 +48,29 @@ textarea.ui-input
 
 
 .ui-input__validation
-  color: $colorRed
+  position: relative
+  display: block
+  color: #d5584d
+  font-size: 15px
+  margin-top: 0.5em
+  padding-left: 25px
+  line-height: 20px
+  &::before
+    display: inline-block
+    content: ' '
+    size: 18px
+    position: absolute
+    top: 0
+    left: 0
+    background-image: svg-load('../icons/svg-colors/validationerr.svg', fill="#fff")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
 
 /* Checkbox
 .ui-checkbox, .ui-radio
   input
-    display: none
+    // display: none
     width: 0.1px
     height: 0.1px
     opacity: 0
