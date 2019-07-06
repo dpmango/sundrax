@@ -3,9 +3,46 @@
 //////////
 (function($, APP) {
   APP.Components.Map = {
+    data: {
+      scriptsCreated: false,
+      ymapsLoaded: false,
+    },
     init: function() {
       if ($('#contact-map').length > 0) {
-        ymaps.ready(this.initContactMap);
+        if (this.data.ymapsLoaded) {
+          ymaps.ready(this.initContactMap);
+        } else {
+          this.tryLoadScripts();
+        }
+      }
+    },
+    createScripts: function() {
+      var ymapsK = '9ba9a278-66f0-47c6-8197-0d404ee0def5';
+      var ymapsScript = document.createElement('script');
+      ymapsScript.type = 'text/javascript';
+      ymapsScript.src = 'https://api-maps.yandex.ru/2.1/?apikey=' + ymapsK + '&lang=ru_RU';
+      $('head').append(ymapsScript);
+      this.data.scriptsCreated = true;
+    },
+    tryLoadScripts: function() {
+      var _this = this;
+      if (!_this.data.scriptsCreated) {
+        _this.createScripts();
+      }
+
+      var ticker = setInterval(readyChecker, 250);
+      function readyChecker() {
+        if (!_this.data.ymapsLoaded) {
+          try {
+            if (ymaps.ready()) {
+              _this.data.ymapsLoaded = true;
+              _this.init(); // reinit
+              clearInterval(ticker);
+            }
+          } catch (e) {
+            // console.log('maps not ready yeat, another try');
+          }
+        }
       }
     },
     initContactMap: function() {

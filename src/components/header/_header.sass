@@ -11,7 +11,7 @@
   &__wrapper
     display: flex
     align-items: center
-    padding: 15px 0
+    padding: 15px 0 35px 0
 
   &__logo
     flex: 0 0 auto
@@ -21,6 +21,7 @@
       font-size: 43px
 
   &__menu
+    position: relative
     flex: 0 1 auto
     display: flex
     align-items: center
@@ -28,7 +29,6 @@
     margin: 0
     padding: 0
     li
-      position: relative
       display: inline-block
       margin-right: 8px
       // white-space: nowrap
@@ -37,9 +37,9 @@
       ul
         list-style: none
         margin: 0
-        padding: 0
+        padding: 10px 0 0
         position: absolute
-        top: 100%
+        bottom: -35px
         left: 0
         z-index: 2
         display: flex
@@ -58,7 +58,7 @@
           pointer-events: all
           transform: translate3d(0,0,0)
       &.is-active
-        &::before
+        > a::before
           display: block
           content: ' '
           position: absolute
@@ -67,8 +67,14 @@
           size: 4px
           border-radius: 50%
           background: $colorOrange
+      &.is-sibling-hovered
+        ul
+          opacity: 0
+          pointer-events: none
+          transform: translate3d(-7px,0,0)
 
     a
+      position: relative
       display: inline-block
       padding: 5px
       transition: color .25s $ease
@@ -163,7 +169,7 @@
     transition: transform .25s $ease
     .header__wrapper
       padding-top: 5px
-      padding-bottom: 5px
+      // padding-bottom: 5px
 
 
   &.is-fixed-visible
@@ -177,8 +183,6 @@
   &[data-modifier='is-inner-black']
     background: $fontColor
     color: white
-    .header__wrapper
-      padding-bottom: 35px
 
 +r($lg)
   .header

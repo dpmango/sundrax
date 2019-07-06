@@ -15,9 +15,10 @@
         this.hamburgerClickListener();
         this.listenScroll();
         this.listenResize();
+        this.menuHover();
       }
 
-      // this.setMenuClass();
+      this.setMenuClass();
       this.controlHeaderClass();
     },
     getHeaderParams: function() {
@@ -49,6 +50,25 @@
     },
     listenResize: function() {
       _window.on('resize', debounce(this.getHeaderParams.bind(this), 100));
+    },
+    menuHover: function() {
+      var $menuLi = $('.header__menu > li').filter(function(index, el) {
+        return $(el).find('ul').length > 0;
+      });
+
+      $menuLi.on('mouseenter', function() {
+        var $li = $(this);
+        if (!$li.is('.is-active')) {
+          $('.header__menu > li.is-active').addClass('is-sibling-hovered');
+        }
+      });
+
+      $menuLi.on('mouseleave', function() {
+        var $li = $(this);
+        if (!$li.is('.is-active')) {
+          $('.header__menu > li.is-active').removeClass('is-sibling-hovered');
+        }
+      });
     },
     scrollHeader: function() {
       if (this.data.header.container !== undefined) {
