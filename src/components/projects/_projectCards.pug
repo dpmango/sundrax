@@ -1,0 +1,72 @@
+mixin projectCol8
+  .projects__col.projects__col--8
+    a.project(href="#")
+      .project__cover
+        picture(
+          alt="")
+            source(
+            media="(min-width: 577px)"
+            srcset='https://placehold.co/660x300')
+            source(
+            media="(min-width: 0px)"
+            srcset='https://placehold.co/560x200')
+            img(src='https://placehold.co/660x300')
+      .project__content
+        .project__name Парковка Торгового Центра
+        .project__location Москва, Россия
+
+mixin projectCol
+  .projects__col
+    a.project(href="#")
+      .project__cover
+        picture(
+          alt="")
+            source(
+            media="(min-width: 577px)"
+            srcset='https://placehold.co/325x300')
+            source(
+            media="(min-width: 0px)"
+            srcset='https://placehold.co/325x200')
+            img(src='https://placehold.co/325x300')
+      .project__content
+        .project__name Парковка Торгового Центра
+        .project__location Москва, Россия
+
+mixin projectCol12
+  .projects__col.projects__col--12
+    a.project(href="#")
+      .project__cover
+        picture(
+          alt="")
+            source(
+            media="(min-width: 769px)"
+            srcset='https://placehold.co/1000x300')
+            source(
+            media="(min-width: 577px)"
+            srcset='https://placehold.co/720x300')
+            source(
+            media="(min-width: 0px)"
+            srcset='https://placehold.co/560x200')
+            img(src='https://placehold.co/1000x300')
+      .project__content
+        .project__name Парковка Торгового Центра
+        .project__location Москва, Россия
+
+mixin projectCol6
+  .projects__col.projects__col--6
+    a(href="#").project.project--huge
+      .project__cover
+        picture(
+          alt="")
+            source(
+            media="(min-width: 769px)"
+            srcset='https://placehold.co/490x420')
+            source(
+            media="(min-width: 577px)"
+            srcset='https://placehold.co/660x350')
+            source(
+            media="(min-width: 0px)"
+            srcset='https://placehold.co/560x250')
+            img(src='https://placehold.co/490x420')
+      .project__content
+        .project__title Сценическое освещение

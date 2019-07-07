@@ -1,29 +1,17 @@
+include _projectCards
+
 // PROJECTS
 .projects
   .container
 
     // grid
     .projects__grid
-      .projects__col.projects__col--6
-        a(href="#").project.project--huge(style="background-image: url(https://placehold.co/490x420)")
-          .project__content
-            .project__title Наружное освещение
-      .projects__col.projects__col--6
-        a(href="#").project.project--huge(style="background-image: url(https://placehold.co/490x420)")
-          .project__content
-            .project__title Сценическое освещение
-      .projects__col
-        a.project(href="#" style="background-image: url(https://placehold.co/325x300)")
-          .project__content
-            .project__title Промышленное освещение
-      .projects__col
-        a.project(href="#" style="background-image: url(https://placehold.co/325x300)")
-          .project__content
-            .project__title Промышленное освещение
-      .projects__col
-        a.project(href="#" style="background-image: url(https://placehold.co/325x300)")
-          .project__content
-            .project__title Промышленное освещение
+      +projectCol6
+      +projectCol6
+      +projectCol
+      +projectCol
+      +projectCol
+
     // search
     .projects__search.search-projects
       .search-projects__input.ui-search
@@ -35,28 +23,8 @@
 
     // grid
     .projects__grid
-      .projects__col.projects__col--8
-        a.project(href="#" style="background-image: url(https://placehold.co/660x300)")
-          .project__content
-            .project__name Парковка Торгового Центра
-            .project__location Москва, Россия
-      .projects__col
-        a.project(href="#" style="background-image: url(https://placehold.co/325x300)")
-          .project__content
-            .project__name Парковка Торгового Центра
-            .project__location Москва, Россия
-      .projects__col
-        a.project(href="#" style="background-image: url(https://placehold.co/325x300)")
-          .project__content
-            .project__name Парковка Торгового Центра
-            .project__location Москва, Россия
-      .projects__col.projects__col--8
-        a.project(href="#" style="background-image: url(https://placehold.co/660x300)")
-          .project__content
-            .project__name Парковка Торгового Центра
-            .project__location Москва, Россия
-      .projects__col.projects__col--12
-        a.project(href="#" style="background-image: url(https://placehold.co/1000x300)")
-          .project__content
-            .project__name Парковка Торгового Центра
-            .project__location Москва, Россия
+      +projectCol8
+      +projectCol
+      +projectCol
+      +projectCol8
+      +projectCol12

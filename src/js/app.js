@@ -62,17 +62,12 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
 
     // Plugins which depends on DOM and page content
     app.initPlugins = function(fromPjax) {
-      APP.Plugins.Teleport.init();
       APP.Plugins.Sliders.init();
       APP.Plugins.Modals.init();
       APP.Plugins.Masks.init();
       APP.Plugins.Selectric.init();
-      APP.Plugins.ScrollReveal.init();
       APP.Plugins.TextareaAutoExpand.init();
       APP.Plugins.Validations.init();
-
-      // APP.Plugins.Countdown.init();
-      // APP.Plugins.FooterReveal.init();
     };
 
     // All components from `src/componenets`
