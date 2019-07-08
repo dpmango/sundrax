@@ -19,12 +19,13 @@
 
       .content__col.content__col--slider
         // SLIDER
-        .article__slider.swiper-container(js-swiper-article-slider)
+        .article__slider.swiper-container(js-swiper-article-slider js-popup-gallery)
           .swiper-wrapper
             each slide in [1,2,3,4,5,6]
               .article__slide.swiper-slide
                 span= slide
-                img(src='img/articleSliderImage.jpg' srcset='img/articleSliderImage@2x.jpg 2x' alt="")
+                a(href="img/articleSliderImage.jpg").no-barba
+                  img(src='img/articleSliderImage.jpg' srcset='img/articleSliderImage@2x.jpg 2x' alt="")
 
         .article__thumbs.swiper-container(js-swiper-article-slider-thumbs)
           .swiper-wrapper

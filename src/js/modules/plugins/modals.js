@@ -28,7 +28,7 @@
       });
 
       $('[js-popup-gallery]').magnificPopup({
-        delegate: 'a',
+        delegate: '.swiper-slide:not(.swiper-slide-duplicate) a',
         type: 'image',
         tLoading: 'Загрузка #%curr%...',
         mainClass: 'popup-buble',
