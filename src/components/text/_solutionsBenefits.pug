@@ -1,0 +1,23 @@
+// CONTENT
+.text
+  .container
+    .text__title <strong>Преимущества систем освещения</strong> компании Сандракс
+    .text__benefits.benefits
+      // SERVICE CATEGORIES
+      -
+        var list = [
+          {icon: 'benefits-energy', title: 'Энергосбережение', description: 'с системой управления светодиодным освещением'},
+          {icon: 'benefits-cost', title: 'Сокращение расходов', description: 'Использование освещения только в нужном месте в нужное время'},
+          {icon: 'benefits-adapt', title: 'Адаптация освещения', description: 'Влияние на настроение, повышение комфорта пользователей'},
+          {icon: 'benefits-arch', title: 'Украшение городов', description: 'Красивое освещение фасадов, памятников, мостов и дорог'},
+          {icon: 'benefits-optimize', title: 'Оптимизация работы', description: 'Расписания и правила автоматически регулируют уровень освещенности и изменяют сценарии освещения'},
+        ]
+      .benefits__grid
+        each card, idx in list
+          // col
+          .benefits__col
+            .benefits__element
+              .benefits__icon
+                +svgMono(card.icon)
+              .benefits__title= card.title
+              .benefits__description= card.description

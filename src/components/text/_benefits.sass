@@ -1,0 +1,58 @@
+.benefits
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -10px
+  &__col
+    width: 100%
+    flex: 0 0 20%
+    max-width: 20%
+    min-width: 1px
+    min-height: 0
+    padding: 10px
+    display: flex
+    flex-direction: column
+  &__element
+    flex: 1 0 auto
+    display: flex
+    flex-direction: column
+    text-align: center
+    transition: color .25s ease
+  &__icon
+    flex: 0 0 auto
+    font-size: 0
+    color: $colorRed
+    min-height: 80px
+    padding-bottom: 10px
+    .ico
+      font-size: 52px
+    .ico-mono
+      &-benefits
+        &-energy
+          font-size: 46px
+        &-cost
+          font-size: 42px
+        &-adapt
+          font-size: 60px
+        &-arch
+          font-size: 50px
+
+  &__title
+    font-size: 18px
+  &__description
+    font-size: 13px
+    margin-top: 0.2em
+
++r($md)
+  .benefits
+    &__grid
+      justify-content: center
+    &__col
+      flex-basis: $col4
+      max-width: $col4
+
++r(414)
+  .benefits
+    &__col
+      flex-basis: $col6
+      max-width: $col6

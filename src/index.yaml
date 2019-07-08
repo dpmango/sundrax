@@ -16,7 +16,7 @@ PageList:
   - file: feedback.html
     ready: 90
   - file: solutions.html
-    ready: 70
+    ready: 90
   - file: projects_1.html
     ready: 90
   - file: projects_2.html
