@@ -11,6 +11,9 @@
     min-height: 0
     padding-left: 12px
     padding-right: 12px
+    &--half
+      flex-basis: $col6
+      max-width: $col6
     &--primary
       flex-basis: $col8
       max-width: $col8
@@ -45,6 +48,9 @@
         max-width: $col12
       &--secondary
         display: none
+      &--half
+        flex-basis: $col12
+        max-width: $col12
 
 // wysiwyg content
 .wysiwyg
@@ -113,13 +119,21 @@
   a:not(.btn)
     color: $colorPrimary
     text-decoration: underline
+    transition: color .25s $ease
     &:hover
       text-decoration: none
       color: $colorBlue
 
-  img
+  img, video, picture, figure, iframe
     max-width: 100%
 
+  &--contacttrash
+    h4, h5, h6
+      margin: 0.1em 0
+    h4
+      margin-top: 0.35em
+    h4 + h5
+      margin-bottom: 1.2em
 
 .w-400
   font-weight: 400

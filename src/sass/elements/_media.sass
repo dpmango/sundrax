@@ -17,7 +17,7 @@
     padding-bottom: 75%
   &[data-ar="21:9"]
     padding-bottom: 42.85%
-  img
+  img, video, iframe
     position: absolute
     top: 0
     left: 0
@@ -39,27 +39,3 @@ img, picture
   &.is-loaded
     opacity: 1
 
-
-// reveal
-.reveal
-  position: relative
-  overflow: hidden
-  &::after
-    display: inline-block
-    content: ' '
-    position: absolute 0
-    background: white
-    z-index: 2
-    pointer-events: none
-    transition: transform .8s cubic-bezier(0.9, 0, 0.1, 1)
-  &--black
-    &::after
-      background: #000
-
-  &.is-animated
-    &[data-direction="ltr"]
-      &::after
-        transform: translate(100%,0)
-    &[data-direction="rtl"]
-      &::after
-        transform: translate(-100%,0)

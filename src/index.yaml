@@ -24,7 +24,7 @@ PageList:
   - file: project.html
     ready: 60
   - file: contacts.html
-    ready: 70
+    ready: 90
   - file: support_1.html
     ready: 90
   - file: support_2.html

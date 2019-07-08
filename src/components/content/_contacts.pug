@@ -2,27 +2,28 @@
 .content
   .container
     .content__grid
-      .content__col.content__col--primary
-        .wysiwyg
+      .content__col.content__col--half
+        .wysiwyg.wysiwyg--contacttrash
           h3 Контакты
           p Россия, 115114, г. Москва, <br/> ул. Летниковская, д. 11/10, стр. 1, подъезд 6
 
-          p
-            h5 Служба технической поддержки:
-            h6 8 800 600 50 49
-            h6
-              a(href="mailto:help@sundrax.ru") help@sundrax.ru
-          p
-            h5 Сервисная служба:
-            h6 +7 495 797 32 24
-            h6
-              a(href="mailto:svc@sundrax.ru") svc@sundrax.ru
-          p
-            h5 Отдел продаж:
-            h6 +7 495 797 32 18
+          h5 Служба технической поддержки:
+          h4 8 800 600 50 49
+          h5
+            a(href="mailto:help@sundrax.ru") help@sundrax.ru
 
-          p По другим вопросам отправьте свое сообщение на электронную почту <a href="mailto:sales@sundrax.ru">sales@sundrax.ru</a>
+          h5 Сервисная служба:
+          h4 +7 495 797 32 24
+          h5
+            a(href="mailto:svc@sundrax.ru") svc@sundrax.ru
 
-      .content__col.content__col--secondary
+          h5 Отдел продаж:
+          h4 +7 495 797 32 18
+
+          p По другим вопросам отправьте свое сообщение <br/>на электронную почту <a href="mailto:sales@sundrax.ru">sales@sundrax.ru</a>
+
+      .content__col.content__col--half
         .wysiwyg
-          video
+          .scaler(data-ar="16:9")
+            video(controls)
+              source(src="/video/test.mp4" type="video/mp4")
