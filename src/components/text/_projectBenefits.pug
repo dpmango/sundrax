@@ -1,0 +1,23 @@
+// CONTENT
+.text
+  .container
+    .text__title <strong>Преимущества системы</strong>
+    .text__benefits.benefits
+      // SERVICE CATEGORIES
+      -
+        var list = [
+          {icon: 'benefits-energy', title: 'Энергосбережение', description: 'с системой управления светодиодным освещением'},
+          {icon: 'benefits-cost', title: 'Сокращение расходов', description: 'Использование освещения только в нужном месте в нужное время'},
+          {icon: 'benefits-settings', title: 'Персональное управление', description: 'Каждый светильник, каждый сектор освещения можно настроить отдельно'},
+          {icon: 'benefits-repeair', title: 'Простота внедрения', description: 'Простота и легкость в установке оборудования, не требующая специальной техники'},
+          {icon: 'benefits-wireless', title: 'Никаких проводов', description: 'Привлекательное окружение за счет полного избавления от проводов и лишних столбов'},
+        ]
+      .benefits__grid
+        each card, idx in list
+          // col
+          .benefits__col
+            .benefits__element
+              .benefits__icon
+                +svgMono(card.icon)
+              .benefits__title= card.title
+              .benefits__description= card.description

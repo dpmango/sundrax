@@ -15,6 +15,38 @@
   &__benefits
     margin: 20px 0
 
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    margin: -25px
+  &__col
+    width: 100%
+    flex: 0 0 100%
+    min-width: 1px
+    min-height: 0
+    padding: 25px
+    h1,h2,h3,h4
+      &:first-child
+        margin-top: 0
+    &--45
+      flex-basis: 45%
+      max-width: 45%
+    &--55
+      flex-basis: 55%
+      max-width: 55%
+
++r($md)
+  .text
+    &__grid
+    &__col
+      &--45
+        flex-basis: 100%
+        max-width: 100%
+      &--55
+        flex-basis: 100%
+        max-width: 100%
+
+
 +r($sm)
   .text
     &__title
