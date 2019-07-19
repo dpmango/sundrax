@@ -29,6 +29,8 @@ PageList:
     ready: 90
   - file: support_2.html
     ready: 90
+  - file: support_3.html
+    ready: 90
   - file: devices.html
     ready: 90
   - file: devices-inner.html

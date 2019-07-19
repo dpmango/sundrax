@@ -11,7 +11,7 @@ const renderHtml = onlyChanged =>
     .src([config.src.templates + '/[^_]*.pug'])
     .pipe(plumber({ errorHandler: config.errorHandler }))
     // .pipe(gulpif(onlyChanged, changed(config.dest.html, { extension: '.html' })))
-    .pipe(changed(config.dest.html, { extension: '.html' }))
+    // .pipe(changed(config.dest.html, { extension: '.html' }))
     .pipe(frontMatter({ property: 'data' }))
     .pipe(pug({ pretty: true }))
     .pipe(gulp.dest(config.dest.html));
