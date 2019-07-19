@@ -1,0 +1,52 @@
+// CONTENT
+.content.content--prod
+  .container
+    .content__grid
+      .content__col.content__col--article
+        // ARTICLE
+        .article
+          .article__files
+            a(href="#" target="_blank").article__file
+              .article__file-icon
+                +svgColor('file-pdf')
+              span Спецификация
+            a(href="#" target="_blank").article__file
+              .article__file-icon
+                +svgColor('file-pdf')
+              span Инструкция по установке
+
+          h1.article__title.article__title--huge КУЛОН-П
+          .article__content
+            .wysiwyg
+              p КУЛОН-П предназначен для индивидуального управления и контроля работы светильников по силовой линии (PLC). Управляемые светильники должны быть оснащены модулями PLC.
+              br
+              br
+              br
+              br
+              h5 Ключевые особенности
+              p
+                strong Сбор информации о работоспособности светильников
+              p
+                strong Сбор информации об энергопотреблении каждого светильника
+              p
+                strong Индивидуальная и групповая регулировка мощности отдельных strong светильников в диапазоне 0–100%
+              br
+              br
+              a(href="#").btn.btn-primary Заказать звонок
+
+      .content__col.content__col--slider
+        // SLIDER
+        .article__slider.swiper-container(js-swiper-article-slider js-popup-gallery)
+          .swiper-wrapper
+            each slide in [1,2,3,4,5,6]
+              .article__slide.article__slide--prod.swiper-slide
+                span= slide
+                a(href="img/articleSliderImage.jpg").no-barba
+                  img(src='img/projectSliderImage.jpg' srcset='img/projectSliderImage@2x.jpg 2x' alt="")
+
+        .article__thumbs.swiper-container(js-swiper-article-slider-thumbs)
+          .swiper-wrapper
+            each thumb in [1,2,3,4,5,6]
+              .article__slide.article__slide--thumb.swiper-slide
+                span= thumb
+                img(src='img/projectSliderImage.jpg' srcset='img/projectSliderImage@2x.jpg 2x' alt="")

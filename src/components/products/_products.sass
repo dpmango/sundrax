@@ -1,12 +1,5 @@
 .products
-
-
-.products-op
-  margin: 40px 0
-
-  &__title
-    font-size: 30px
-    font-weight: 700
+  margin-bottom: 40px
   &__grid
     display: flex
     flex-wrap: wrap
@@ -19,11 +12,17 @@
     min-height: 0
     padding: 12px
 
+.products-op
+  margin: 40px 0
+
+  &__title
+    font-size: 30px
+    font-weight: 700
   &__more
     margin-top: 20px
 
 +r($md)
-  .products-op
+  .products
     &__col
       flex-basis: 100%
       max-width: 100%
@@ -54,3 +53,39 @@
   &:hover
     .product__content
       color: $colorPrimary
+
+/* products nav
+.products-nav
+  margin: 30px 0
+  &__list
+    list-style: none
+    margin: 0px -5px
+    padding: 0
+    display: flex
+    flex-wrap: wrap
+    li
+      display: inlile-block
+      margin-right: 10px
+      &.is-active
+        a
+          color: $colorOrange
+          text-decoration: none
+      &:last-of-type
+        margin-right: 0
+    a
+      display: inline-block
+      padding: 5px
+      text-decoration: underline
+      transition: color .25s $ease
+      &:hover
+        color: $colorOrange
+
+    &--secondary
+      li
+        font-size: 14px
+
++r($md)
+  .products-nav
+    &__list
+      &--secondary
+        margin-top: 15px
