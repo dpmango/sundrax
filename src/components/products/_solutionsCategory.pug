@@ -1,0 +1,25 @@
+// PRODUCTS ON PROJECT
+.products.products-op
+  .container
+    .products-op__title.products-op__title--big <a href="#">Оборудование</a> для наружного освещения
+    .products__grid.products__grid--more-gradient
+      each col in [1,2,3,4]
+        .products__col
+          // product
+          a(href="#").product
+            .product__image
+              img(src='img/product_1.png' srcset='img/product_1@2x.png 2x')
+            .product__content
+              .product__title Модуль РД
+              .product__description Модуль РД устанавливается на корпус каждого светильника и управляется по радиоканалу 868 МГц.
+        .products__col
+          // product
+          a(href="#").product
+            .product__image
+              img(src='img/product_2.png' srcset='img/product_2@2x.png 2x')
+            .product__content
+              .product__title КУЛОН-РД
+              .product__description КУЛОН-РД предназначен для управления светильниками по радиоканалу (РД).
+
+    .products__load-more
+      a(href="#") Показать еще

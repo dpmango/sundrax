@@ -70,6 +70,20 @@
           },
         },
       });
+
+      // Text sections
+      new Swiper('[js-swiper-textsections]', {
+        wrapperClass: 'swiper-wrapper',
+        slideClass: 'swiper-slide',
+        loop: false,
+        spaceBetween: 0,
+        slidesPerView: 1,
+        normalizeSlideIndex: true,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+        },
+      });
     },
 
     initResponsiveSwipers: function() {

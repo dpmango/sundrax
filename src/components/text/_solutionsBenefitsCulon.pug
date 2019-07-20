@@ -1,0 +1,28 @@
+// CONTENT
+.text
+  .container
+    .text__title <strong>Преимущества системы</strong> АСУНО «КУЛОН»
+    .text__benefits.benefits.benefits--cblack
+      // SERVICE CATEGORIES
+      -
+        var list = [
+          {icon: 'benefits-integration', title: 'Легкая интеграция'},
+          {icon: 'benefits-functional', title: 'Широкий функционал'},
+          {icon: 'benefits-data', title: 'Единая база данных'},
+          {icon: 'benefits-control', title: 'Гибкость управления'},
+
+          {icon: 'benefits-autonomy', title: 'Автономность'},
+          {icon: 'benefits-economy', title: 'Экономичность'},
+          {icon: 'benefits-safety', title: 'Надежность'},
+          {icon: 'benefits-efficiency', title: 'Энергоэффективность'},
+        ]
+      .benefits__grid
+        each card, idx in list
+          // col
+          .benefits__col
+            .benefits__element
+              .benefits__icon
+                +svgMono(card.icon)
+              .benefits__title= card.title
+      .benefits__cta
+        a(href="#").btn.btn-primary Связаться с нами

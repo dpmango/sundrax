@@ -42,12 +42,41 @@
           font-size: 46px
         &-wireless
           font-size: 44px
+        &-city-2
+          font-size: 60px
+        &-city-6
+          font-size: 56px
+        &-city-7
+          font-size: 60px
+        &-city-8
+
 
   &__title
     font-size: 18px
   &__description
     font-size: 13px
     margin-top: 0.2em
+  &__cta
+    margin: 10px
+  &--cblack
+    max-width: 800px
+    .benefits
+      &__grid
+        justify-content: flex-start
+      &__col
+        flex-basis: 25%
+        max-width: 25%
+        margin-bottom: 20px
+      &__element
+        max-width: 140px
+      &__icon
+        color: $fontColor
+      &__title
+        font-size: 15px
+  &--cblack-no-limit
+    .benefits
+      &__element
+        max-width: 100%
 
 +r($md)
   .benefits
@@ -56,9 +85,17 @@
     &__col
       flex-basis: $col4
       max-width: $col4
+    &--cblack
+      .benefits__col
+        flex-basis: $col4
+        max-width: $col4
 
 +r(414)
   .benefits
     &__col
       flex-basis: $col6
       max-width: $col6
+    &--cblack
+      .benefits__col
+        flex-basis: $col6
+        max-width: $col6

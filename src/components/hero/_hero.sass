@@ -4,6 +4,7 @@
   background-repeat: no-repeat
   background-position: center center
   background-size: cover
+  color: white
   &--inner
     height: 475px
   &--actions-only
@@ -12,15 +13,18 @@
       position: static
   &__wrapper
     padding-top: 90px
-    color: white
   &__title
     font-size: 60px
     font-weight: 700
-    margin: 0
+    margin: 0.25em 0 0
+    & + .hero__subtitle
+      margin-top: 0
   &__subtitle
     font-size: 40px
     font-weight: 400
-    margin: 0
+    margin: 1em 0 0
+    strong
+      display: block
 
   &__actions
     position: absolute
@@ -70,6 +74,21 @@
       &:hover
         color: $fontColor
         background: $colorOrange
+
+  &__image
+    margin-top: 40px
+    width: 100%
+    overflow: hidden
+    img
+      width: 100%
+  &--no-cover
+    height: auto
+    color: $fontColor
+
++r($xl)
+  .hero
+    &__image
+      width: 1200px
 
 +r($sm)
   .hero

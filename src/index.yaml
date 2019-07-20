@@ -17,6 +17,10 @@ PageList:
     ready: 90
   - file: solutions.html
     ready: 90
+  - file: solutions-city.html
+    ready: 90
+  - file: solutions-city_2.html
+    ready: 90
   - file: projects_1.html
     ready: 90
   - file: projects_2.html

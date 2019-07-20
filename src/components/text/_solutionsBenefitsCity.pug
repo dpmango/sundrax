@@ -1,0 +1,24 @@
+// CONTENT
+.text
+  .container
+    .text__benefits.benefits.benefits--cblack.benefits--cblack-no-limit
+      -
+        var list = [
+          {icon: 'benefits-city-1', title: 'Включение/отключение освещения по расписанию '},
+          {icon: 'benefits-city-2', title: 'Возможность пофазного отключения '},
+          {icon: 'benefits-city-3', title: 'Диагностика напряжения на отходящих линиях '},
+          {icon: 'benefits-city-4', title: 'Сбор информации со счетчиков '},
+
+          {icon: 'benefits-city-5', title: 'Возможность построения АСКУЭ'},
+          {icon: 'benefits-city-6', title: 'Возможность простого масштабирования системы '},
+          {icon: 'benefits-city-7', title: 'Интеграция в существующую систему управления '},
+          {icon: 'benefits-city-8', title: 'Надежность и простота в эксплуатации '},
+        ]
+      .benefits__grid
+        each card, idx in list
+          // col
+          .benefits__col
+            .benefits__element
+              .benefits__icon
+                +svgMono(card.icon)
+              .benefits__title= card.title

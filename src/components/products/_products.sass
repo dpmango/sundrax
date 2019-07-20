@@ -1,9 +1,21 @@
 .products
   margin-bottom: 40px
   &__grid
+    position: relative
     display: flex
     flex-wrap: wrap
     margin: 12px -12px
+    &--more-gradient
+      &::after
+        display: inline-block
+        content: ' '
+        position: absolute
+        z-index: 2
+        bottom: 0px
+        left: 0
+        right: 0
+        height: 100px
+        background: linear-gradient(to top, rgba(white, .99) 0%, rgba(white, 0.01) 100%)
   &__col
     width: 100%
     flex: 0 0 50%
@@ -11,13 +23,29 @@
     min-width: 1px
     min-height: 0
     padding: 12px
+  &__load-more
+    text-align: center
+    margin: 1em 0
+    a
+      text-decoration: underline
+      &:hover
+        text-decoration: none
 
 .products-op
   margin: 40px 0
-
   &__title
     font-size: 30px
     font-weight: 700
+    a
+      text-decoration: underline
+      font-weight: 700
+      transition: color .25s $ease
+      &:hover
+        color: $colorPrimary
+        text-decoration: none
+    &--big
+      font-size: 40px
+      font-weight: 400
   &__more
     margin-top: 20px
 
@@ -26,6 +54,12 @@
     &__col
       flex-basis: 100%
       max-width: 100%
+  .products-op
+    &__title
+      &--big
+        font-size: 30px
+        br
+          display: none
 
 
 /* prodcut
