@@ -39,3 +39,5 @@ PageList:
     ready: 90
   - file: devices-inner.html
     ready: 90
+  - file: kp-request.html
+    ready: 90
