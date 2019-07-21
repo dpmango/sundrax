@@ -1,5 +1,16 @@
+include ../shema.org/_publisher
+
 // CONTENT
-.content.header-offset
+.content.header-offset(itemscope itemtype="http://schema.org/Article")
+  // shema.org hidden
+  link(itemprop="mainEntityOfPage" href="https://sundrax.surge.sh/press-article.html")
+  meta(itemprop="inLanguage" content="ru")
+  // image is required by google validation - by no one on page
+  //- meta(itemprop="image" content="https://sundrax.surge.sh/img/articleSliderImage.jpg")
+  meta(itemprop="author" content="Sundrax")
+  meta(itemprop="dateModified" content="2019-07-04T09:04:20+02:00")
+  +metaPublisher
+
   .container
     .content__grid
       .content__col.content__col--press
@@ -7,12 +18,12 @@
         .article
           .article__origin
             span Оригинал статьи
-            a(href="#") http://www.lipetskmedia.ru/news/view/109229-Avtomatizirovannuyu.html
+            a(href="#" itemprop="citation") http://www.lipetskmedia.ru/news/view/109229-Avtomatizirovannuyu.html
 
-          h1.article__title Автоматизированную систему освещения поставили в нескольких районах Липецкой области
-          .article__date 17.12.2018
+          h1.article__title(itemprop="headline") Автоматизированную систему освещения поставили в нескольких районах Липецкой области
+          .article__date(content="2018-12-17T09:04:20+00:00" itemprop="datePublished") 17.12.2018
           .article__content.article__content--full
-            .wysiwyg
+            .wysiwyg(itemprop="articleBody")
               p В  Липецкой области установили  25 контроллеров управления освещением «Кулон-Ц» на автомобильных дорогах общего пользования регионального значения Это сделано в рамках III этапа создания  автоматизированной системы управления наружным освещением (АСУНО) «Кулон».
               p В состав системы  «Кулон» включен  в общей сложности 81 шкаф управления наружным освещением на следующих автомобильных дорогах:
 

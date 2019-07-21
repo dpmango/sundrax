@@ -1,13 +1,24 @@
+include ../shema.org/_publisher
+
 // CONTENT
-.content.header-offset
+.content.header-offset(itemscope itemtype="http://schema.org/Article")
+  // shema.org hidden
+  link(itemprop="mainEntityOfPage" href="https://sundrax.surge.sh/project.html")
+  meta(itemprop="inLanguage" content="ru")
+  meta(itemprop="image" content="https://sundrax.surge.sh/img/articleSliderImage.jpg")
+  meta(itemprop="author" content="Sundrax")
+  meta(itemprop="dateModified" content="2019-07-04T09:04:20+02:00")
+  meta(itemprop="datePublished" content="2019-07-04T09:04:20+02:00")
+  +metaPublisher
+
   .container
     .content__grid
       .content__col.content__col--article
         // ARTICLE
         .article
-          h1.article__title.article__title--huge Инновационное освещение парковки <span class="w-400">крупного торгового центра</span>
+          h1.article__title.article__title--huge(itemprop="headline") Инновационное освещение парковки <span class="w-400">крупного торгового центра</span>
           .article__content
-            .wysiwyg
+            .wysiwyg(itemprop="articleBody")
               h5 Парковка ТЦ в центре города
               p Система потолочного освещения позволила не только добиться снижения энергозатрат на 72%, но также и обеспечить необходимый уровень освещения для комфортных и безопасных условий труда.
               blockquote Мы рады что воспользовались оборудованием Сандракс. Система полностью соответствует нашим ожиданиям и потребностям и собрала очень положительные отзывы».

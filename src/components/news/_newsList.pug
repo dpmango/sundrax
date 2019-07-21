@@ -1,16 +1,26 @@
+include ../shema.org/_publisher
 // NEWS
-.news-list
+.news-list(itemscope itemtype="http://schema.org/ItemList")
   .container
+    // schema.org hidden
+    link(itemprop="mainEntityOfPage" href="https://sundrax.surge.sh/news.html")
+    meta(name="itemListOrder" content="Descending")
     each el in [1,2,3,4]
-      .newslist-card
+      .newslist-card(itemprop="itemListElement" itemscope itemtype="http://schema.org/NewsArticle")
+        meta(itemprop="image" content="https://sundrax.surge.sh/img/newsCard.jpg")
+        meta(itemprop="position" content=el)
+        meta(itemprop="author" content="Sundrax")
+        meta(itemprop="dateModified" content="2018-07-04T09:04:20+02:00")
+        meta(itemprop="url mainEntityOfPage" content="news-article.html")
+        +metaPublisher
         a(href="#").newslist-card__image
           img(src='img/newsCard.jpg' srcset='img/newsCard@2x.jpg 2x')
         .newslist-card__content
-          a(href="#").newslist-card__title Новое оборудование компании «Сандракс». <br/>Новая версия беспроводных трансиверов RadioGate Solid (DMX) <strong>с 2 и 4 DMX-портами.</strong>
-          .newslist-card__description Уникальные гибридные устройства, объединяющие в себе беспроводную передачу DMX512/ArtNet/sACN-потоков и работу в сетях Ethernet.
+          a(href="#").newslist-card__title(itemprop="name headline") Новое оборудование компании «Сандракс». <br/>Новая версия беспроводных трансиверов RadioGate Solid (DMX) <strong>с 2 и 4 DMX-портами.</strong>
+          .newslist-card__description(itemprop="description") Уникальные гибридные устройства, объединяющие в себе беспроводную передачу DMX512/ArtNet/sACN-потоков и работу в сетях Ethernet.
           .newslist-card__tags
             a(href="#") #Новинки
             a(href="#") #DMX
             a(href="#") #Сценическоеосвещение
-          .newslist-card__date 20 Марта 2019
+          .newslist-card__date(itemprop="datePublished" content="2019-03-20T09:04:20+00:00") 20 Марта 2019
 

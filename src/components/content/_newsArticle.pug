@@ -1,22 +1,32 @@
+include ../shema.org/_publisher
+
 // CONTENT
-.content.header-offset
+.content.header-offset(itemscope itemtype="http://schema.org/NewsArticle")
+  // shema.org hidden
+  link(itemprop="mainEntityOfPage" href="https://sundrax.surge.sh/news-article.html")
+  meta(itemprop="inLanguage" content="ru")
+  meta(itemprop="image" content="https://sundrax.surge.sh/img/articleSliderImage.jpg")
+  meta(itemprop="author" content="Sundrax")
+  meta(itemprop="dateModified" content="2019-07-04T09:04:20+02:00")
+  +metaPublisher
+
   .container
     .content__grid
       .content__col.content__col--article
         // ARTICLE
         .article
-          h1.article__title АСУНО КУЛОН управляет освещением периметра крупного промышленного предприятия
+          h1.article__title(itemprop="headline") АСУНО КУЛОН управляет освещением периметра крупного промышленного предприятия
           .article__tags
             a(href="#") #Проекты
             a(href="#") #АСУПО
             a(href="#") #КУЛОН
             a(href="#") #Промышленноеосвещение
           .article__content
-            .wysiwyg
+            .wysiwyg(itemprop="articleBody")
               p Система КУЛОН позволяет управлять освещением периметра предприятия по годовому расписанию включений и отключений или в ручном режиме по командам диспетчера.
 
               p Идейные соображения высшего порядка, а также новая модель организационной деятельности играет важную роль в формировании направлений прогрессивного развития. Равным образом укрепление и развитие структуры позволяет выполнять важные задания по разработке систем массового участия. Идейные соображения высшего порядка, а также новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития. Повседневная практика показывает, что рамки и место обучения кадров играет важную роль в формировании форм развития.
-          .article__date 20 Марта 2019
+          .article__date(content="2019-04-20T09:04:20+00:00" itemprop="datePublished") 20 Марта 2019
           include _share
           .article__cta
             a(href='#').btn.btn-primary Подробнее о проекте

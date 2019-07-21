@@ -1,5 +1,15 @@
+include ../shema.org/_publisher
+
 // CONTENT
-.content.content--prod
+.content.content--prod(itemscope itemtype="http://schema.org/Product")
+  // shema.org hidden
+  link(itemprop="mainEntityOfPage" href="https://sundrax.surge.sh/press-article.html")
+  meta(itemprop="image" content="https://sundrax.surge.sh/img/articleSliderImage.jpg")
+  meta(itemprop="brand" content="Sundrax")
+  // required (isbn, mpn or gtin8) && sku
+  //- meta(itemprop="isbn, mpn or gtin8")
+  //- meta(itemprop="sku" content="1234")
+
   .container
     .content__grid
       .content__col.content__col--article
@@ -15,9 +25,9 @@
                 +svgColor('file-pdf')
               span Инструкция по установке
 
-          h1.article__title.article__title--huge КУЛОН-П
+          h1.article__title.article__title--huge(itemprop="model name") КУЛОН-П
           .article__content
-            .wysiwyg
+            .wysiwyg(itemprop="description")
               p КУЛОН-П предназначен для индивидуального управления и контроля работы светильников по силовой линии (PLC). Управляемые светильники должны быть оснащены модулями PLC.
               br
               br
