@@ -217,15 +217,28 @@
       margin-top: 7px
     &__search
       margin-left: 20px
+      size: 30px
       order: 2
       input
-        width: 30px
-        height: 30px
+        position: absolute
+        z-index: 1
+        top: -2px
+        left: -120px
+        width: 150px
+        padding: 10px
+        background: white
         opacity: 0
+        pointer-events: none
       button
         .ico
           font-size: 20px
         &:hover
+          color: $colorOrange
+      &.is-open
+        input
+          opacity: 1
+          pointer-events: all
+        button
           color: $colorOrange
 
     &__contacts

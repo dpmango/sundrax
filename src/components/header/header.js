@@ -50,20 +50,32 @@
       });
     },
     searchClickListener: function() {
-      _document.on('click', '[js-header-search] button', function(e) {
-        var $searchForm = $('[js-header-search]');
+      var $searchForm = $('[js-header-search]');
 
-        if (window.innerWidth <= 1080) {
-          e.preventDefault();
-          e.stopPropagation();
-          var dataHref = $searchForm.data('target');
-          if (dataHref && dataHref !== '#') {
-            e.preventDefault();
-            e.stopPropagation();
-            Barba.Pjax.goTo(dataHref);
+      _document
+        .on('click', '[js-header-search] button', function(e) {
+          if (window.innerWidth <= 1080) {
+            if (!$searchForm.is('.is-open')) {
+              e.preventDefault();
+              e.stopPropagation();
+              $searchForm.addClass('is-open');
+            }
+
+            // if need redirect instead
+            // var dataHref = $searchForm.data('target');
+            // if (dataHref && dataHref !== '#') {
+            //   e.preventDefault();
+            //   e.stopPropagation();
+            //   Barba.Pjax.goTo(dataHref);
+            // }
           }
-        }
-      });
+        })
+        .on('click', function(e) {
+          console.log($(e.target).closest('[js-header-search]'));
+          if ($(e.target).closest('[js-header-search]').length === 0) {
+            $searchForm.removeClass('is-open');
+          }
+        });
     },
     mnavClickListener: function() {
       _document.on('click', '[js-mobile-nav] li', function(e) {
