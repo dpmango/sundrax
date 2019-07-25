@@ -1,3 +1,4 @@
+
 // FOOTER :: START
 footer.footer
   .container
@@ -5,6 +6,25 @@ footer.footer
       .footer__left
         .footer__logo
           +svgMono('logo-big')
+
+        // socials
+        .footer__socials.footer__socials--mobile
+          .footer__socials-link
+            a(href="#") Подписаться на новости
+          .footer__socials-list
+            ul.socials
+              li.socials__button
+                a(href="#")
+                  +svgMono('social-vk')
+              li.socials__button
+                a(href="#")
+                  +svgMono('social-facebook')
+              li.socials__button
+                a(href="#")
+                  +svgMono('social-whatup')
+              li.socials__button
+                a(href="#")
+                  +svgMono('social-rss')
 
         .footer__contacts
           .footer__contactmap
@@ -15,20 +35,20 @@ footer.footer
               | Россия, 115114 Москва, ул. Летниковская,<br/>
               | д. 11/10, стр. 1, подъезд 6
             p
-              strong Техническая поддержка:
-              a(href="tel:88006005090")
-                strong 8 800 600 50 49
-              a(href="mailto:help@sundrax.ru") help@sundrax.ru
+              strong Отдел продаж:
+              a(href="tel:+74957973218")
+                strong +7 495 797 32 18
+              a(href="sales@sundrax.ru") sales@sundrax.ru
             p
               strong Сервисная служба:
               a(href="tel:+74957973224")
                 strong +7 495 797 32 24
               a(href="mailto:svc@sundrax.ru") svc@sundrax.ru
             p
-              strong Отдел продаж:
-              a(href="tel:+74957973218")
-                strong +7 495 797 32 18
-              a(href="sales@sundrax.ru") sales@sundrax.ru
+              strong Техническая поддержка:
+              a(href="tel:88006005090")
+                strong 8 800 600 50 49
+              a(href="mailto:help@sundrax.ru") help@sundrax.ru
 
       // RIGHT
       .footer__right
@@ -53,15 +73,14 @@ footer.footer
               li.socials__button
                 a(href="#")
                   +svgMono('social-rss')
-
           .footer__socials-link
             a(href="#") Подписаться на новости
 
-          // brands
-          .footer__brands
-            .footer__brands-title Другие бренды компании
-            .footer__brands-links
-              a(href="#" target="_blank") QULON.pro
-              a(href="#" target="_blank") DMX.com
+        // brands
+        .footer__brands
+          .footer__brands-title Другие бренды компании
+          .footer__brands-links
+            a(href="#" target="_blank") QULON.pro
+            a(href="#" target="_blank") DMX.com
 
 // FOOTER :: END

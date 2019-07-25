@@ -59,6 +59,8 @@
 
   &__socials
     margin: 30px 0 30px
+    &--mobile
+      display: none
   &__socials-title
     font-size: 15px
   &__socials-list
@@ -95,6 +97,10 @@
     &__right
       flex-basis: 100%
       max-width: 100%
+    &__socials
+      display: none
+      &--mobile
+        display: block
 
 +r($sm)
   .footer

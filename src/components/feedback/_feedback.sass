@@ -16,8 +16,13 @@
   &__slider
     .swiper-button-prev, .swiper-button-next
       position: absolute
+      z-index: 3
       top: 50%
+      cursor: pointer
       transform: translateY(-50%)
+      transition: filter .25s $ease
+      &:hover
+        filter: brightness(0%)
 
     .swiper-button-prev
       left: 0

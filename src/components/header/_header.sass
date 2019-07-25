@@ -8,6 +8,7 @@
   will-change: transform
   backface-visibility: hidden
   transform-style: preserve-3d
+  transition: background .25s $ease
   &__wrapper
     display: flex
     align-items: center
@@ -146,10 +147,20 @@
     text-decoration: underline
     &:hover
       text-decoration: none
+  &__phone-mobile
+    display: none
+    font-size: 0
+    display: none
+    color: white
+    transition: color .25s $ease
+    &:hover
+      color: $colorOrange
+    .ico
+      font-size: 20px
 
   &__hamburger
     display: none
-    padding-left: 20px
+    padding-left: 13px
 
   &.is-white
     color: white
@@ -158,6 +169,21 @@
       background-color: white
       &::before, &::after
         background-color: white
+    .hamburger:hover
+      .hamburger-inner
+        background-color: $colorOrange
+        &::before, &::after
+          background-color: $colorOrange
+
+  &.is-menu-open
+    background: $colorPrimary !important
+    .hamburger:hover
+      .hamburger-inner
+        background-color: rgba(white, .7)
+        &::before, &::after
+          background-color: rgba(white, .7)
+    .header__search button:hover, .header__phone-mobile:hover
+      color: rgba(white, .7)
 
   &.is-fixed
     // should be normalized to -100% scroll at this point
@@ -165,7 +191,7 @@
     // visibility: hidden
     transform: translate3d(0,-100%,0) !important
     background: $fontColor
-    transition: transform .25s $ease
+    transition: transform .25s $ease, background .25s $ease
     .header__wrapper
       padding-top: 5px
       // padding-bottom: 5px
@@ -176,7 +202,7 @@
     transform: translate3d(0,0,0) !important
 
   &.is-transitioning
-    transition: transform .25s $ease
+    transition: transform .25s $ease, background .25s $ease
     transform: translate3d(0,-100%,0) !important
 
   &[data-modifier='is-inner-black']
@@ -185,8 +211,37 @@
 
 +r($lg)
   .header
+    &__cta
+      align-items: center
+    &__socials
+      margin-top: 7px
+    &__search
+      margin-left: 20px
+      order: 2
+      input
+        width: 30px
+        height: 30px
+        opacity: 0
+      button
+        .ico
+          font-size: 20px
+        &:hover
+          color: $colorOrange
+
+    &__contacts
+      order: 1
+      margin-left: 25px
+    &__phone-mobile
+      display: block
+    &__phone, &__callback
+      display: none
+
++r(992)
+  .header
     &__wrapper
       padding-bottom: 15px
+    &__cta
+      padding-top: 0px
     &__menu
       display: none
     &__hamburger
@@ -202,5 +257,5 @@
   .header
     &__logo
       padding-right: 0
-    &__search, &__socials
+    &__socials
       display: none

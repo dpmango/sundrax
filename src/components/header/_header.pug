@@ -18,14 +18,16 @@ header.header.is-white
                 +svgMono('social-facebook')
 
         // search
-        .header__search
+        .header__search(action="#" js-header-search data-target="/search.html")
           input(type="text")
           button(type="submit")
             +svgMono('search')
 
         // contacts
         .header__contacts
-          a(href='#').header__phone +7 495 797 32 18
+          a(href='tel:88006007189').header__phone-mobile
+            +svgMono('phone')
+          a(href='tel:88006007189').header__phone 8 800 600 71 89
           a(href='#modalCallback' js-popup).header__callback Обратный звонок
 
       .header__hamburger
@@ -36,7 +38,7 @@ header.header.is-white
 // MOBILE NAVI
 .mobile-navi
   .mobile-navi__wrapper
-    ul.mobile-navi__menu
+    ul.mobile-navi__menu(js-mobile-nav)
       include _menuContent
     .mobile-navi__cta
       a(href="mailto:help@sundrax.ru") help@sundrax.ru

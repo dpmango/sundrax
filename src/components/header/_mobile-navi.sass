@@ -48,16 +48,33 @@
     pointer-events: all
     transform: translate3d(0,0,0)
 
-+r($lg)
++r(992)
   .mobile-navi
     display: flex
 
-+r(414)
++r($sm)
   .mobile-navi
     &__menu
       text-align: left
-      li
-        font-size: 28px
-        ul
-          li
-            font-size: 16px
+      font-size: 28px
+      > li
+        position: relative
+        padding-right: 20px
+        &::after
+          display: inline-block
+          content: ' '
+          position: absolute
+          right: 0
+          top: 50%
+          transform: translateY(-50%)
+          +sprite('swiper-right')
+          filter: brightness(100%)
+        &.is-active
+          ul
+            display: block
+      ul
+        display: none
+        li
+          font-size: 16px
+    &__cta
+      text-align: left
