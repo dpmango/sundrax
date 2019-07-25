@@ -59,7 +59,10 @@
       font-size: 28px
       > li
         position: relative
-        padding-right: 20px
+        a
+          display: block
+          width: 100%
+          padding-right: 20px
         &::after
           display: inline-block
           content: ' '
@@ -69,9 +72,10 @@
           transform: translateY(-50%)
           +sprite('swiper-right')
           filter: brightness(100%)
-        &.is-active
-          ul
-            display: block
+          pointer-events: none
+        // &.is-active
+        //   ul
+        //     display: block
       ul
         display: none
         li

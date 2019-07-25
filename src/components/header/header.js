@@ -71,26 +71,33 @@
           }
         })
         .on('click', function(e) {
-          console.log($(e.target).closest('[js-header-search]'));
           if ($(e.target).closest('[js-header-search]').length === 0) {
             $searchForm.removeClass('is-open');
           }
         });
     },
     mnavClickListener: function() {
-      _document.on('click', '[js-mobile-nav] li', function(e) {
+      _document.on('click', '[js-mobile-nav] li a', function(e) {
         var $nav = $('[js-mobile-nav]');
 
         if (window.innerWidth <= 568) {
-          e.preventDefault();
-          e.stopPropagation();
-          $nav
-            .find('li')
-            .find('ul')
-            .slideUp();
-          $(this)
-            .find('ul')
-            .slideDown();
+          var $li = $(this).closest('li');
+          console.log($li.is('.is-open'));
+          if ($li.is('.is-open')) {
+          } else {
+            e.preventDefault();
+            e.stopPropagation();
+            // cleanup
+            $nav.find('li').removeClass('is-open');
+            $nav
+              .find('li')
+              .find('ul')
+              .slideUp();
+
+            // add active
+            $li.addClass('is-open');
+            $li.find('ul').slideDown();
+          }
         }
       });
     },
