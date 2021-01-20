@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "barba.js": "^1.0.0",
-    "gsap": "^2.0.2",
+    "gsap": "^3.6.0",
     "jquery": "^3.4.1",
     "jquery-mask-plugin": "^1.14.15",
     "jquery-selectric": "^0.1.3",
